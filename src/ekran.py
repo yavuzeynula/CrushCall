@@ -337,25 +337,55 @@ class Pencere:
         self._onay(self.b_kopya, "Copied")
 
     def satir_kopyala(self):
+        """Windows: dosyayı Excel'de açıp satırları Excel'e kopyalatır ("Insert Copied Cells" çıksın).
+        Olmazsa (ya da Mac'te): biçimli HTML panoya."""
         s = self._davet_satirlari()
+        if sys.platform == "win32":
+            yol = self._dosyaya_yaz()
+            if not yol:
+                return
+            self.b_satir.configure(text="Opening Excel…", state="disabled")
+            kutu = {}
+            threading.Thread(target=lambda: kutu.setdefault("ok", pano.excel_kopyala(yol, len(s))), daemon=True).start()
+
+            def bekle():
+                if "ok" not in kutu:
+                    self.kok.after(100, bekle)
+                    return
+                self.b_satir.configure(text="Copy rows", state="normal")
+                if kutu["ok"]:
+                    self.durum.configure(text="Rows copied in Excel. In the other file: right-click a cell › Insert Copied Cells",
+                                         fg=self.r["ok"])
+                else:
+                    self._html_kopyala(s)
+            bekle()
+            return
+        self._html_kopyala(s)
+
+    def _html_kopyala(self, s):
         bicimli = pano.kopyala(cikti_davet.html(s), cikti_davet.tsv(s), self.kok)
         self._onay(self.b_satir, f"{len(s)} rows copied" if bicimli else f"{len(s)} rows copied (plain)")
 
-    def kaydet(self):
+    def _dosyaya_yaz(self) -> Path | None:
+        """Davet dosyasını kayıt klasörüne yazar (klasör ilk sefer sorulur). Hata ekranda."""
         klasor = self.ayar.get("kayit_klasoru")
         if not klasor or not Path(klasor).is_dir():
             klasor = filedialog.askdirectory(title="Where should invitation lists be saved?")
             if not klasor:
-                return
+                return None
             self.ayar["kayit_klasoru"] = klasor
             ayar.yaz(self.ayar)
         try:
-            yol = cikti_davet.kaydet(self._davet_satirlari(), self.tarih, Path(klasor))
+            return cikti_davet.kaydet(self._davet_satirlari(), self.tarih, Path(klasor))
         except cikti_davet.KayitHatasi as e:
             messagebox.showerror("CrushCall", str(e))
-            return
-        self._onay(self.b_kaydet, "Saved, opening…")
-        dosya_ac(yol)
+            return None
+
+    def kaydet(self):
+        yol = self._dosyaya_yaz()
+        if yol:
+            self._onay(self.b_kaydet, "Saved, opening…")
+            dosya_ac(yol)
 
     def _onay(self, dugme, metin):
         eski = dugme.cget("text")

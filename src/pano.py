@@ -77,3 +77,45 @@ def kopyala(html: str, metin: str, tk_kok=None) -> bool:
         tk_kok.clipboard_clear()
         tk_kok.clipboard_append(metin)
     return False
+
+
+# --- Excel'in kendi kopyası (Windows) ---------------------------------------
+# Excel "Insert Copied Cells" seçeneğini yalnız kendi içinden yapılan kopyada
+# gösterir; dışarıdan gelen HTML'de yalnız "Paste" çıkar (Yavuz 2026-11-24).
+# Bu yüzden dosya kullanıcının açık Excel'inde açılır ve satırları Excel kopyalar.
+_EXCEL_BETIK = r"""
+$ErrorActionPreference = 'Stop'
+$yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK
+try { $x = [Runtime.InteropServices.Marshal]::GetActiveObject('Excel.Application') }
+catch { $x = New-Object -ComObject Excel.Application }
+$x.Visible = $true
+$wb = $null
+foreach ($w in $x.Workbooks) { if ($w.FullName -eq $yol) { $wb = $w } }
+if (-not $wb) { $wb = $x.Workbooks.Open($yol) }
+$ws = $wb.Worksheets.Item(1)
+$ws.Activate() | Out-Null
+$r = $ws.Range($aralik)
+$r.Select() | Out-Null
+$r.Copy() | Out-Null
+'OK'
+"""
+
+
+def excel_aralik(satir_sayisi: int, ilk: int = 13) -> str:
+    """Davet dosyasında sarı veri satırları (C–M sütunları)."""
+    return f"C{ilk}:M{ilk + satir_sayisi - 1}"
+
+
+def excel_kopyala(dosya, satir_sayisi: int) -> bool:
+    """Dosyayı açık Excel'de açıp sarı satırları Excel'e kopyalatır. Yalnız Windows; olmazsa False."""
+    if sys.platform != "win32" or satir_sayisi < 1:
+        return False
+    import os
+    ortam = {**os.environ, "CRUSHCALL_DOSYA": str(dosya), "CRUSHCALL_ARALIK": excel_aralik(satir_sayisi)}
+    try:
+        r = subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", _EXCEL_BETIK],
+                           env=ortam, capture_output=True, text=True, timeout=90,
+                           creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+    except (OSError, subprocess.TimeoutExpired):
+        return False
+    return r.returncode == 0 and r.stdout.strip().endswith("OK")

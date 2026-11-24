@@ -104,3 +104,10 @@ def test_cf_html_ofsetleri():
     al = lambda ad: int(metin.split(ad + ":")[1][:10])
     assert veri[al("StartFragment"):al("EndFragment")].decode() == "<table><tr><td>x</td></tr></table>"
     assert veri[al("StartHTML"):al("EndHTML")].decode().startswith("<html>")
+
+
+def test_excel_aralik_ve_mac_disi():
+    assert pano.excel_aralik(16) == "C13:M28" and pano.excel_aralik(1) == "C13:M13"
+    import sys
+    if sys.platform != "win32":
+        assert pano.excel_kopyala("x.xlsx", 3) is False      # Mac'te HTML yoluna düşer
