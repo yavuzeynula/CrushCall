@@ -135,7 +135,8 @@ def hesapla(tarih: date, secim: dict[str, Path], gruplar: tuple[str, ...] | None
             ns = [n for n in numuneler if n.yas == yas]
             satir_sayisi = sum(n.set_sayisi for n in ns)
             ad = yas_adi(g.kod, yas)
-            sonuc.uyarilar += seri_kontrol(ad, ns, o.onceki.get(yas))
+            if g.kod == "concrete":   # yalnız betonda numaralar sıralı (grout'ta yaşa göre karışık)
+                sonuc.uyarilar += seri_kontrol(ad, ns, o.onceki.get(yas))
             bos_id = sum(1 for u in o.uyarilar if f" {yas} row " in u.metin and "Sample ID is empty" in u.metin)
             if o.sayim.get(yas, 0) != satir_sayisi + bos_id:
                 sonuc.uyarilar.append(Uyari("error", f"{ad}: count mismatch, {o.sayim.get(yas, 0)} source rows "

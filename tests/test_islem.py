@@ -95,6 +95,18 @@ def test_hesapla_uctan_uca(tmp_path):
     assert not [u for u in s.uyarilar if "previous day" in u.metin]
 
 
+def test_seri_kontrolu_yalniz_beton(tmp_path):
+    # Grout numaraları yaşa göre sıralı değil (0256 dün, 0254 bugün: 2026-11-24 ekran) -> uyarı yok
+    b = ["RIA No:", "Sample ID", "Pouring Date", "Location", None, None, None,
+         "1-day or 7-days Compressive Strength EN 196-1", "28-days Compressive Strength EN 196-1"]
+    y = kaynak_yap(tmp_path / "g.xlsx", b, [
+        ["R", "G26-GRT-0256", gun(19), "2", "c", "s", "e", gun(20), None],
+        ["R", "G26-GRT-0254", gun(18), "2", "c", "s", "e", gun(25), None],
+    ], sayfa="Grout Comp Log")
+    s = islem.hesapla(D25, {"grout_s": y}, gruplar=("grout_s",))
+    assert [u.metin for u in s.uyarilar] == []
+
+
 def test_dosya_secilmemis_hata():
     s = islem.hesapla(D25, {}, gruplar=("concrete",))
     assert not s.tamam and any("no source file chosen" in u.metin for u in s.uyarilar)

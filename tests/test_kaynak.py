@@ -38,6 +38,23 @@ def test_metin_tarih(tmp_path):
     assert len(uy) == 1 and "row 7" in uy[0] and "11/25/2026" in uy[0]
 
 
+def test_alt_baslik_ve_bos_satir_uyari_vermez(tmp_path):
+    # Gerçek log'da 5. satır alt başlık ("Test date"); boş şablon satırlarında #REF! olabiliyor (2026-11-24 ekran)
+    y = kaynak_yap(tmp_path / "b.xlsx", BETON_BASLIK, [
+        beton_satir(None, None, t7="Test date", t28="Test date"),
+        beton_satir("R1", "A-1", t7=gun(25)),
+        beton_satir(None, None, t7="#REF!"),
+    ])
+    o = kaynak.oku(y, GRUP["concrete"], D25)
+    assert [s.sample_id for s in o.satirlar] == ["A-1"] and o.uyarilar == []
+
+
+def test_formul_hatasi_sample_id_varsa_uyari(tmp_path):
+    y = kaynak_yap(tmp_path / "b.xlsx", BETON_BASLIK, [beton_satir("R1", "A-1", t7="#REF!")])
+    uy = _hatalar(kaynak.oku(y, GRUP["concrete"], D25), "warning")
+    assert uy == ["Concrete 7d row 5 (A-1): formula error '#REF!' in the log, fix it in Excel"]
+
+
 def test_excel_seri_sayisi_tarih(tmp_path):
     # Power Query Date.From sayıyı da tarih sayıyordu; aynısı
     seri = (D25 - date(1899, 12, 30)).days

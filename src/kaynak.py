@@ -114,7 +114,10 @@ def _tara(wb, grup: Grup, tarih: date, o: Okuma, yol: Path) -> dict[int, list[tu
                     bekleyen.setdefault(n, []).append((i, yas))
                 continue
             if durum == "hata":
-                bozuk.append(f"{grup.ad} {yas} row {n}: date not readable: '{v}'")
+                # Sample ID'siz satır numune değil (alt başlık "Test date", boş şablon satırı): sessiz geç
+                if sid:
+                    bozuk.append(f"{grup.ad} {yas} row {n} ({sid}): formula error '{v}' in the log, fix it in Excel"
+                                 if str(v).startswith("#") else f"{grup.ad} {yas} row {n} ({sid}): date not readable: '{v}'")
                 continue
             if d == tarih:
                 o.sayim[yas] += 1

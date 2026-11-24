@@ -71,7 +71,7 @@ Alınan alanlar (başlık adına göre bulunur, sıra numarasına göre değil):
 
 Başlık bulunamazsa grup durur ve uyarı çıkar: "Beton: '7 days Compressive Strength EN12390-3' sütunu bulunamadı (dosya: …)".
 
-Tarih hücresi boşsa satır atlanır. Doluysa ama tarih değilse (ör. "28/10/2026" metni çözülemiyorsa) uyarı satırı çıkar: "Beton satır 812: tarih okunamadı: 'x'". `dd/mm/yyyy` metni tarih sayılır.
+Tarih hücresi boşsa satır atlanır. Sample ID'si boş satırdaki okunamayan tarih sessiz geçer (5. satır "Test date" alt başlığı, boş şablon satırlarındaki `#REF!`); Sample ID'li satırda `#REF!` gibi formül hatası "formula error … fix it in Excel" uyarısı verir. Doluysa ama tarih değilse (ör. "28/10/2026" metni çözülemiyorsa) uyarı satırı çıkar: "Beton satır 812: tarih okunamadı: 'x'". `dd/mm/yyyy` metni tarih sayılır.
 
 ## İşleme kuralları
 
@@ -83,7 +83,7 @@ Tarih hücresi boşsa satır atlanır. Doluysa ama tarih değilse (ör. "28/10/2
 
 **Grout 1g / 7g.** Grout-S'nin "1-day or 7-days" sütunu için: test tarihi − döküm tarihi = 1 ise `1d`, 7 ise `7d`. Başka bir sayıysa ya da döküm tarihi boşsa yaş "?" olur ve uyarı çıkar: "GRT-0254: 1 mi 7 mi belli değil, bakılmalı".
 
-**Seri kontrolü** (her grup + yaş için, Sample ID'nin sonundaki sayıya bakılır; sayı yoksa atlanır):
+**Seri kontrolü** (yalnız Beton 7g/28g; grout numaraları yaşa göre karışık olduğundan yanlış alarm veriyordu — şirket bilgisayarı denemesi 2026-11-24. Sample ID'nin sonundaki sayıya bakılır):
 - Gün içi: birleştirmeden sonra numaralar sıralanır; arada eksik varsa uyarı: "Beton 7g: 1716 yok".
 - Dünden devam: aynı dosya ve aynı sütunda, seçilen tarihten önceki en yakın test günü bulunur. O günün son numarası + 1, bugünün ilk numarasına eşit değilse uyarı: "Beton 7g: önceki gün (24.11.2026) 1712 ile bitti, bugün 1715 ile başlıyor".
 - Bunlar uyarıdır; çıktı yine alınabilir.
