@@ -1,0 +1,10 @@
+# Yalniz testler icin (programa girmez). Kilit: requirements-test.txt
+#   ~/tools/tedarik/bin/pip-compile -q --generate-hashes --strip-extras --allow-unsafe -o requirements-test.txt requirements-test.in
+# Testleri butun cekirdeklere dagitir: pytest -n auto
+pytest-xdist==3.8.0
+# Ana kilitle (requirements.txt) ayni surumler: test kurulumu programin paketlerini yukseltmesin
+pytest==9.0.3
+iniconfig==2.3.0
+packaging==26.0
+pluggy==1.6.0
+pygments==2.20.0
