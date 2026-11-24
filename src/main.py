@@ -64,11 +64,23 @@ def _zorunlu_guncelleme(kok, bilgi):
         kok.destroy()
 
 
+def buyut(kok) -> None:
+    """Büyütülmüş açıl (Yavuz 2026-11-24: "ilk açılış güzel değil"). Windows/Mac: zoomed;
+    desteklenmezse ekran boyu."""
+    try:
+        kok.state("zoomed")
+    except tk.TclError:
+        kok.geometry(f"{kok.winfo_screenwidth()}x{kok.winfo_screenheight()}+0+0")
+
+
 def main():
     _dpi()
     kok = tk.Tk()
+    kok.withdraw()                  # yerleşim bitmeden küçük pencere görünüp büyümesin
     ikon.set_icon(kok)
     ekran.Pencere(kok, surum=read_version())
+    buyut(kok)
+    kok.deiconify()
     kutu = _guncelleme_baslat()     # iş parçacığı en geç ~5 sn'de biter (timeout)
 
     def kontrol():

@@ -56,3 +56,20 @@ def test_tarih_okunur(tk_root, tmp_path):
     p.tarih_var.set("2026-12-01")
     p.tarih_yazildi()
     assert f"{p.tarih:%d.%m.%Y}" == "01.12.2026" and "dd.mm.yyyy" in p.durum.cget("text")
+
+
+def test_buyut(tk_root, monkeypatch):
+    import tkinter as tk
+    import main
+    cagri = []
+    monkeypatch.setattr(tk_root, "state", lambda *a: cagri.append(a))
+    main.buyut(tk_root)
+    assert cagri == [("zoomed",)]
+
+    def desteklemez(*a):
+        raise tk.TclError("bad argument")
+    monkeypatch.setattr(tk_root, "state", desteklemez)
+    olcu = []
+    monkeypatch.setattr(tk_root, "geometry", lambda g: olcu.append(g))
+    main.buyut(tk_root)
+    assert olcu == [f"{tk_root.winfo_screenwidth()}x{tk_root.winfo_screenheight()}+0+0"]
