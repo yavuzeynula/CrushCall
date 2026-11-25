@@ -57,9 +57,9 @@ def ps(betik: str, **ortam) -> None:
 def _izle():
     """Teshis: Excel betiginin adimlarini ve ciktisini gosterir."""
     b = pano._EXCEL_BETIK
-    b = b.replace("if ($onceki) {", "$t0 = Get-Date; function Iz($m) { 'IZ ' + [int]((Get-Date) - $t0).TotalMilliseconds + ' ms: ' + $m }\nIz 'basla'\nif ($onceki) {")
-    b = b.replace("Invoke-Item -LiteralPath $yol", "Iz 'onceki kapandi'\nInvoke-Item -LiteralPath $yol\nIz 'acildi'")
-    b = b.replace("if (-not $wb) { throw", "Iz ('kitap bulundu, hwnd=' + $wb.Application.Hwnd)\nif (-not $wb) { throw")
+    b = b.replace("$x = $null", "$t0 = Get-Date; function Iz($m) { 'IZ ' + [int]((Get-Date) - $t0).TotalMilliseconds + ' ms: ' + $m }\nIz 'basla'\n$x = $null")
+    b = b.replace("if ($x) {", "Iz ('acik Excel: ' + [bool]$x)\nif ($x) {")
+    b = b.replace("Dene { $ws = $wb", "Iz ('kitap acik, hwnd=' + $wb.Application.Hwnd)\nDene { $ws = $wb")
     b = b.replace("'OK'", "Iz ('kopyalandi, ccm=' + $wb.Application.CutCopyMode)\n'OK'")
     pano._EXCEL_BETIK = b
     asil = pano.subprocess.run

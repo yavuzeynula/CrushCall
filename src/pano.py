@@ -83,27 +83,46 @@ def kopyala(html: str, metin: str, tk_kok=None) -> bool:
 # Excel "Insert Copied Cells" seçeneğini yalnız kendi içinden yapılan kopyada
 # gösterir; dışarıdan gelen HTML'de yalnız "Paste" çıkar (Yavuz 2026-11-24).
 # Bu yüzden dosya kullanıcının açık Excel'inde açılır ve satırları Excel kopyalar.
-# Dosya çift tıklar gibi (kabukla) açılır: COM ile "açık Excel"i aramak, kullanıcı Excel'i
-# henüz kayıt etmemişse ikinci bir Excel başlatıyordu; kopya oradaydı, kullanıcının
-# dosyasında yalnız "Insert" (boş satır) çıkıyordu (Yavuz 2026-11-25, VM'de doğrulandı).
-# Kitap, Windows'un açık nesne tablosundan dosya yoluyla alınır (Excel başlatmaz).
+# Kullanıcının açık Excel'i, Windows'un açık nesne tablosundaki (ROT) kitaplarından bulunur ve
+# dosya onun içinde açılır. Eskiden COM ile "açık Excel" aranıyordu; bulamayınca ikinci bir
+# Excel başlatıyordu, kopya oradaydı, kullanıcının dosyasında yalnız "Insert" (boş satır)
+# çıkıyordu (Yavuz 2026-11-25, VM'de doğrulandı). Açık Excel yoksa dosya çift tıklar gibi açılır.
 # Tüm satır kopyalanır: satır başlığına yapıştırılabilir, satır yüksekliği de gelir.
 # Excel aynı adlı iki kitabı açamaz: önceki CrushCall kopyası hâlâ açıksa kapatılır;
 # önce kopya bırakılır, yoksa Excel "panoda çok veri var" sorusunda takılır.
 _EXCEL_BETIK = r"""
 $ErrorActionPreference = 'Stop'
-$yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK; $onceki = $env:CRUSHCALL_ONCEKI
-# Açık kitabı Windows'un açık nesne tablosundan alır; açık değilse null (BindToMoniker gibi Excel başlatmaz).
+$yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK
 Add-Type -TypeDefinition @'
+using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ComTypes;
 public static class CrushRot {
   [DllImport("ole32.dll")] static extern int GetRunningObjectTable(int r, out IRunningObjectTable t);
+  [DllImport("ole32.dll")] static extern int CreateBindCtx(int r, out IBindCtx c);
   [DllImport("ole32.dll", CharSet = CharSet.Unicode)] static extern int CreateFileMoniker(string yol, out IMoniker m);
+  // Açık kitap; açık değilse null (BindToMoniker gibi Excel başlatmaz).
   public static object Al(string yol) {
     IRunningObjectTable t; IMoniker m; object o;
     if (GetRunningObjectTable(0, out t) != 0 || CreateFileMoniker(yol, out m) != 0) return null;
     return t.GetObject(m, out o) == 0 ? o : null;
+  }
+  // Açık bütün Excel kitapları.
+  public static object[] Kitaplar() {
+    var l = new List<object>(); IRunningObjectTable t; IBindCtx c; IEnumMoniker e;
+    if (GetRunningObjectTable(0, out t) != 0 || CreateBindCtx(0, out c) != 0) return l.ToArray();
+    t.EnumRunning(out e);
+    var m = new IMoniker[1];
+    while (e.Next(1, m, IntPtr.Zero) == 0) {
+      string ad;
+      try { m[0].GetDisplayName(c, null, out ad); } catch { continue; }
+      ad = ad.ToLowerInvariant();
+      if (!(ad.EndsWith(".xlsx") || ad.EndsWith(".xlsm") || ad.EndsWith(".xls") || ad.EndsWith(".xlsb"))) continue;
+      object o;
+      if (t.GetObject(m[0], out o) == 0) l.Add(o);
+    }
+    return l.ToArray();
   }
 }
 '@
@@ -111,18 +130,22 @@ function Dene($is) {
   for ($i = 0; $i -lt 50; $i++) { try { return & $is } catch { Start-Sleep -Milliseconds 200 } }
   & $is
 }
-if ($onceki) {
-  $o = [CrushRot]::Al($onceki)
-  if ($o) { Dene { $o.Application.CutCopyMode = $false; $o.Close($false) } | Out-Null }
+$x = $null
+foreach ($k in [CrushRot]::Kitaplar()) { try { if ($k.Application.Visible) { $x = $k.Application; break } } catch {} }
+if ($x) {
+  $ad = Split-Path $yol -Leaf
+  Dene { foreach ($w in @($x.Workbooks)) {
+    if ($w.Name -eq $ad -and $w.FullName -like '*\CrushCall_*') { $x.CutCopyMode = $false; $w.Close($false) } } } | Out-Null
+  $wb = Dene { $x.Workbooks.Open($yol) }
+} else {
+  Invoke-Item -LiteralPath $yol          # açık Excel yok: çift tıklar gibi aç
+  $wb = $null
+  for ($i = 0; $i -lt 600 -and -not $wb; $i++) { Start-Sleep -Milliseconds 100; $wb = [CrushRot]::Al($yol) }
+  if (-not $wb) { throw 'Excel workbook not found' }
 }
-Invoke-Item -LiteralPath $yol              # çift tıklar gibi: kullanıcının açık Excel'ine gider
-$wb = $null
-for ($i = 0; $i -lt 600 -and -not $wb; $i++) { Start-Sleep -Milliseconds 100; $wb = [CrushRot]::Al($yol) }
-if (-not $wb) { throw 'Excel workbook not found' }
 Dene { $ws = $wb.Worksheets.Item(1); $ws.Activate() | Out-Null; $r = $ws.Rows($aralik); $r.Select() | Out-Null; $r.Copy() | Out-Null } | Out-Null
 'OK'
 """
-_onceki = None   # bu oturumda son açılan kopya dosyası
 
 
 def excel_aralik(satir_sayisi: int, ilk: int = 13) -> str:
@@ -135,16 +158,11 @@ def excel_kopyala(dosya, satir_sayisi: int) -> bool:
     if sys.platform != "win32" or satir_sayisi < 1:
         return False
     import os
-    global _onceki
-    ortam = {**os.environ, "CRUSHCALL_DOSYA": str(dosya), "CRUSHCALL_ARALIK": excel_aralik(satir_sayisi),
-             "CRUSHCALL_ONCEKI": str(_onceki or "")}
+    ortam = {**os.environ, "CRUSHCALL_DOSYA": str(dosya), "CRUSHCALL_ARALIK": excel_aralik(satir_sayisi)}
     try:
         r = subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", _EXCEL_BETIK],
                            env=ortam, capture_output=True, text=True, timeout=90,
                            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
     except (OSError, subprocess.TimeoutExpired):
         return False
-    if r.returncode == 0 and r.stdout.strip().endswith("OK"):
-        _onceki = dosya
-        return True
-    return False
+    return r.returncode == 0 and r.stdout.strip().endswith("OK")
