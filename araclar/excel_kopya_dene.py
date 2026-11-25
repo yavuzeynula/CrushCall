@@ -33,6 +33,7 @@ DENETIM = r"""
 'excel islemi: ' + @(Get-Process EXCEL).Count
 $hk = [Runtime.InteropServices.Marshal]::BindToMoniker($env:KULLANICI)   # kullanicinin dosyasinin Excel'i
 $x = $hk.Application
+'kullanici Excel hwnd=' + $x.Hwnd
 'acik kitaplar: ' + (($x.Workbooks | ForEach-Object { $_.Name }) -join ', ')
 "CutCopyMode (1 = copy hazir) = " + $x.CutCopyMode
 $hedef = $null; foreach ($w in $x.Workbooks) { if ($w.FullName -eq $env:KULLANICI) { $hedef = $w } }
@@ -53,6 +54,23 @@ def ps(betik: str, **ortam) -> None:
     print(r.stdout, r.stderr)
 
 
+def _izle():
+    """Teshis: Excel betiginin adimlarini ve ciktisini gosterir."""
+    b = pano._EXCEL_BETIK
+    b = b.replace("if ($onceki) {", "$t0 = Get-Date; function Iz($m) { 'IZ ' + [int]((Get-Date) - $t0).TotalMilliseconds + ' ms: ' + $m }\nIz 'basla'\nif ($onceki) {")
+    b = b.replace("Invoke-Item -LiteralPath $yol", "Iz 'onceki kapandi'\nInvoke-Item -LiteralPath $yol\nIz 'acildi'")
+    b = b.replace("if (-not $wb) { throw", "Iz ('kitap bulundu, hwnd=' + $wb.Application.Hwnd)\nif (-not $wb) { throw")
+    b = b.replace("'OK'", "Iz ('kopyalandi, ccm=' + $wb.Application.CutCopyMode)\n'OK'")
+    pano._EXCEL_BETIK = b
+    asil = pano.subprocess.run
+
+    def run(*a, **k):
+        r = asil(*a, **k)
+        print("   ", (r.stdout + r.stderr).strip().replace("\n", "\n    "))
+        return r
+    pano.subprocess.run = run
+
+
 def bas(satirlar, durum: str) -> None:
     import time
     t0 = time.perf_counter()
@@ -69,6 +87,7 @@ def main() -> int:
     # Yavuz'un kendi dosyası: aynı ad, başka klasör, şablondan (boş).
     kullanici = Path(tempfile.mkdtemp()) / cikti_davet.dosya_adi(TARIH)
     shutil.copy(cikti_davet.SABLON, kullanici)
+    _izle()
     ps("Get-Process EXCEL -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep 2")
     # 1) hic Excel acik degilken basis  2) kullanici kendi dosyasini cift tiklayip acar, yine basar
     #    (onceki ayni adli kopya kapanmali, kopya kullanicinin Excel'inde olmali)
@@ -76,7 +95,8 @@ def main() -> int:
     ps(ISLEMLER)
     ps(KULLANICI_AC, KULLANICI=str(kullanici))
     ps(ISLEMLER)
-    bas(satirlar, "dosyan acik")
+    for _ in range(3):
+        bas(satirlar, "dosyan acik")
     ps(DENETIM, KULLANICI=str(kullanici))
     return 0
 
