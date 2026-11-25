@@ -103,11 +103,20 @@ if ($onceki -and (Acik $onceki)) {
 }
 Invoke-Item -LiteralPath $yol
 $ad = [IO.Path]::GetFileNameWithoutExtension($yol)
-for ($i = 0; $i -lt 300; $i++) {
-  if ((Acik $yol) -and (Get-Process EXCEL -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle -like "*$ad*" })) { break }
-  Start-Sleep -Milliseconds 200
+$wb = $null
+for ($k = 0; $k -lt 5 -and -not $wb; $k++) {
+  # Pencere başlığı tam bu dosya olmalı (kullanıcının dosyasının adında da tarih geçer).
+  for ($i = 0; $i -lt 300; $i++) {
+    if ((Acik $yol) -and (Get-Process EXCEL -ErrorAction SilentlyContinue | Where-Object {
+          $_.MainWindowTitle -like "$ad - *" -or $_.MainWindowTitle -like "$ad.xlsx - *" })) { break }
+    Start-Sleep -Milliseconds 200
+  }
+  $wb = Dene { [Runtime.InteropServices.Marshal]::BindToMoniker($yol) }
+  if (-not $wb.Application.Visible) {   # erken bağlandı: Windows gizli bir Excel başlattı; kapat, yeniden bekle
+    $g = $wb.Application; $g.DisplayAlerts = $false; $g.Quit(); $wb = $null; Start-Sleep 1
+  }
 }
-$wb = Dene { [Runtime.InteropServices.Marshal]::BindToMoniker($yol) }
+if (-not $wb) { throw 'Excel workbook not found' }
 Dene { $ws = $wb.Worksheets.Item(1); $ws.Activate() | Out-Null; $r = $ws.Rows($aralik); $r.Select() | Out-Null; $r.Copy() | Out-Null } | Out-Null
 'OK'
 """
