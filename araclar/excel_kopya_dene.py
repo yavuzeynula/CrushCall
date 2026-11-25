@@ -59,6 +59,8 @@ def _izle():
     b = pano._EXCEL_BETIK
     b = b.replace("$x = $null", "$t0 = Get-Date; function Iz($m) { 'IZ ' + [int]((Get-Date) - $t0).TotalMilliseconds + ' ms: ' + $m }\nIz 'basla'\n$x = $null")
     b = b.replace("if ($x) {", "Iz ('acik Excel: ' + [bool]$x)\nif ($x) {")
+    b = b.replace("  $wb = Dene { $x.Workbooks.Open($yol) }", "  Iz 'onceki kapandi'\n  $wb = Dene { $x.Workbooks.Open($yol) }")
+    b = b.replace("catch { Start-Sleep -Milliseconds 200 }", "catch { Iz ('hata: ' + $_.Exception.Message); Start-Sleep -Milliseconds 200 }")
     b = b.replace("Dene { $ws = $wb", "Iz ('kitap acik, hwnd=' + $wb.Application.Hwnd)\nDene { $ws = $wb")
     b = b.replace("'OK'", "Iz ('kopyalandi, ccm=' + $wb.Application.CutCopyMode)\n'OK'")
     pano._EXCEL_BETIK = b
