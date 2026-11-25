@@ -20,16 +20,20 @@ from veri import Numune  # noqa: E402
 
 TARIH = date(2026, 11, 25)
 
+# Yavuz gibi: dosyaya cift tiklar (kabuk acar, COM degil).
 KULLANICI_AC = r"""
-try { $x = [Runtime.InteropServices.Marshal]::GetActiveObject('Excel.Application') }
-catch { $x = New-Object -ComObject Excel.Application }
-$x.Visible = $true
-$x.Workbooks.Open($env:KULLANICI) | Out-Null
-'acik: ' + ($x.Workbooks | ForEach-Object { $_.Name }) -join ', '
+Get-Process EXCEL -ErrorAction SilentlyContinue | Stop-Process -Force
+Start-Sleep 2
+Invoke-Item $env:KULLANICI
+for ($i = 0; $i -lt 60; $i++) { Start-Sleep 1; if (Get-Process EXCEL -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle }) { break } }
+Start-Sleep 3
+'excel islemi: ' + @(Get-Process EXCEL).Count
 """
 
 DENETIM = r"""
-$x = [Runtime.InteropServices.Marshal]::GetActiveObject('Excel.Application')
+'excel islemi: ' + @(Get-Process EXCEL).Count
+$hk = [Runtime.InteropServices.Marshal]::BindToMoniker($env:KULLANICI)   # kullanicinin dosyasinin Excel'i
+$x = $hk.Application
 'acik kitaplar: ' + (($x.Workbooks | ForEach-Object { $_.Name }) -join ', ')
 "CutCopyMode (1 = copy hazir) = " + $x.CutCopyMode
 $hedef = $null; foreach ($w in $x.Workbooks) { if ($w.FullName -eq $env:KULLANICI) { $hedef = $w } }
