@@ -19,6 +19,7 @@ import pano  # noqa: E402
 from veri import Numune  # noqa: E402
 
 TARIH = date(2026, 11, 25)
+ISLEMLER = r"""Get-CimInstance Win32_Process -Filter "name='EXCEL.EXE'" | ForEach-Object { '  PID ' + $_.ProcessId + ' : ' + $_.CommandLine + ' | pencere: ' + (Get-Process -Id $_.ProcessId).MainWindowTitle }"""
 
 # Yavuz gibi: dosyaya cift tiklar (kabuk acar, COM degil).
 KULLANICI_AC = r"""
@@ -65,7 +66,9 @@ def main() -> int:
     # 1) hic Excel acik degilken basis  2) kullanici kendi dosyasini cift tiklayip acar, yine basar
     #    (onceki ayni adli kopya kapanmali, kopya kullanicinin Excel'inde olmali)
     print("excel_kopyala (Excel kapali):", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    ps(ISLEMLER)
     ps(KULLANICI_AC, KULLANICI=str(kullanici))
+    ps(ISLEMLER)
     print("excel_kopyala (dosyan acik):", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
     ps(DENETIM, KULLANICI=str(kullanici))
     return 0
