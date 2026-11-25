@@ -59,8 +59,15 @@ def main() -> int:
     kullanici = Path(tempfile.mkdtemp()) / cikti_davet.dosya_adi(TARIH)
     shutil.copy(cikti_davet.SABLON, kullanici)
     ps(KULLANICI_AC, KULLANICI=str(kullanici))
-    for _ in range(2):        # ikinci basis: onceki ayni adli kopya kapanmali
-        print("excel_kopyala:", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    print("excel_kopyala:", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    # TEMP teshis: ikinci basis
+    import os
+    ikinci = cikti_davet.kopya_dosyasi(satirlar, TARIH)
+    r = subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command",
+                        pano._EXCEL_BETIK.replace("$w.Close($false)", "'kapat: ' + $w.FullName; $w.Close($false); 'kapandi'")],
+                       env={**os.environ, "CRUSHCALL_DOSYA": str(ikinci), "CRUSHCALL_ARALIK": pano.excel_aralik(2)},
+                       capture_output=True, text=True, timeout=40)
+    print("ikinci:", r.returncode, r.stdout, r.stderr)
     ps(DENETIM, KULLANICI=str(kullanici))
     return 0
 
