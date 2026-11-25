@@ -53,6 +53,13 @@ def ps(betik: str, **ortam) -> None:
     print(r.stdout, r.stderr)
 
 
+def bas(satirlar, durum: str) -> None:
+    import time
+    t0 = time.perf_counter()
+    ok = pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar))
+    print(f"excel_kopyala ({durum}): {ok}  {time.perf_counter() - t0:.1f} sn")
+
+
 def main() -> int:
     ns = [Numune("concrete", "7d", "G26-CON-1714", [None], ria="R-1\nR-2", section="2", chainage="15+020\n0+127",
                  structure="Bridge B0149", element="Shotcrete"),
@@ -65,11 +72,11 @@ def main() -> int:
     ps("Get-Process EXCEL -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep 2")
     # 1) hic Excel acik degilken basis  2) kullanici kendi dosyasini cift tiklayip acar, yine basar
     #    (onceki ayni adli kopya kapanmali, kopya kullanicinin Excel'inde olmali)
-    print("excel_kopyala (Excel kapali):", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    bas(satirlar, "Excel kapali")
     ps(ISLEMLER)
     ps(KULLANICI_AC, KULLANICI=str(kullanici))
     ps(ISLEMLER)
-    print("excel_kopyala (dosyan acik):", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    bas(satirlar, "dosyan acik")
     ps(DENETIM, KULLANICI=str(kullanici))
     return 0
 
