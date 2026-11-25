@@ -43,6 +43,14 @@ def test_satirlar_ornekle_ayni():
         assert s == beklenen, f"satır {r}"
 
 
+@pytest.mark.skipif(not ORNEK.exists(), reason="ornekler/ yok (gerçek veri depoda değil)")
+def test_satir_yuksekligi_ornekle_ayni(tmp_path):
+    """Yükseklik = 15 × satır; satır sayısı sütun genişliğinde kırılmayı da sayar (Grout dar geliyordu)."""
+    ns, ws = _ornek_numuneler()
+    yeni = load_workbook(cikti_davet.kaydet(cikti_davet.satirlar(ns, D25), D25, tmp_path)).active
+    assert [yeni.row_dimensions[r].height for r in range(13, 29)] == [ws.row_dimensions[r].height for r in range(13, 29)]
+
+
 def test_no_ria_ve_tcon_girmez():
     ns = [Numune("concrete", "7d", "A-1", [None], ria=""), Numune("tcon", "7d", "T-1", [None]),
           Numune("concrete", "7d", "A-2", [None], ria="R")]
@@ -76,7 +84,7 @@ def test_kaydet_bicim(tmp_path):
     assert ws["E14"].fill.fgColor.rgb == "FF92D050" and ws["E13"].fill.fgColor.rgb == "FFFFFF00"
     assert ws["G13"].border.left.style == "thin" and ws["G13"].alignment.wrap_text
     assert ws["M13"].value == time(9, 0) and ws["M13"].number_format == "h:mm"
-    assert ws.row_dimensions[13].height == 45 and ws.row_dimensions[14].height == 30
+    assert ws.row_dimensions[13].height == 45 and ws.row_dimensions[14].height == 45   # Grout: sütunda 3 satıra kırılır
     assert ws.max_row == 14          # önce: hücreye bakmak hücreyi oluşturur
 
 

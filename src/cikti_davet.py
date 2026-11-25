@@ -3,10 +3,12 @@ import html as _html
 from copy import copy
 from datetime import date, time
 import tempfile
+import textwrap
 from pathlib import Path
 
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
+from openpyxl.utils import get_column_letter
 
 from tanimlar import CMD_SAAT, LAB, SAAT, YONTEM
 from veri import Numune
@@ -48,6 +50,12 @@ def dosya_adi(tarih: date) -> str:
     return f"Laboratory_Daily_Notification_Invitation_List_{tarih:%d.%m.%Y}.xlsx"
 
 
+def _satir_sayisi(deger, genislik: float) -> int:
+    """Hücrede görünen satır: elle satır sonu + sütun genişliğinde sözcük kırılması."""
+    en = max(1, int(genislik))
+    return sum(max(1, len(textwrap.wrap(parca, en))) for parca in str(deger).split("\n"))
+
+
 def kopya_dosyasi(satirlar_: list[list], tarih: date) -> Path:
     """Copy rows için geçici dosya. Adı yalnız tarih: kullanıcının açık davet dosyasıyla
     aynı adı taşımasın (Excel aynı adlı iki kitabı açamaz)."""
@@ -59,6 +67,7 @@ def kaydet(satirlar_: list[list], tarih: date, klasor: Path, ad: str | None = No
     ws = wb.active
     ws.title = f"{tarih:%d.%m.%Y}"
     ornek = {c: ws.cell(ILK_SATIR, c) for c in range(3, 14)}
+    genislik = {c: ws.column_dimensions[get_column_letter(c)].width for c in range(3, 14)}
     stil = {c: (copy(h.font), copy(h.border), copy(h.fill), copy(h.alignment), h.number_format) for c, h in ornek.items()}
     for i, s in enumerate(satirlar_):
         r = ILK_SATIR + i
@@ -73,7 +82,7 @@ def kaydet(satirlar_: list[list], tarih: date, klasor: Path, ad: str | None = No
             hucre.value = deger
         if _yesil_mi(s):
             ws.cell(r, 5).fill = PatternFill("solid", fgColor="FF" + YESIL)
-        satir_sayisi = max(str(v).count("\n") + 1 for v in s)
+        satir_sayisi = max(_satir_sayisi(v, genislik[3 + k]) for k, v in enumerate(s))
         ws.row_dimensions[r].height = max(30, 15 * satir_sayisi)
     yol = Path(klasor) / (ad or dosya_adi(tarih))
     try:
