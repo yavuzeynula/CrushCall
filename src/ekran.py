@@ -341,8 +341,10 @@ class Pencere:
         Olmazsa (ya da Mac'te): biçimli HTML panoya."""
         s = self._davet_satirlari()
         if sys.platform == "win32":
-            yol = self._dosyaya_yaz()
-            if not yol:
+            try:
+                yol = cikti_davet.kopya_dosyasi(s, self.tarih)
+            except (cikti_davet.KayitHatasi, OSError) as e:
+                messagebox.showerror("CrushCall", str(e))
                 return
             self.b_satir.configure(text="Opening Excel…", state="disabled")
             kutu = {}
@@ -354,7 +356,7 @@ class Pencere:
                     return
                 self.b_satir.configure(text="Copy rows", state="normal")
                 if kutu["ok"]:
-                    self.durum.configure(text="Rows copied in Excel. In the other file: right-click a cell › Insert Copied Cells",
+                    self.durum.configure(text="Rows copied in Excel. In your file: right-click a row number › Insert Copied Cells",
                                          fg=self.r["ok"])
                 else:
                     self._html_kopyala(s)

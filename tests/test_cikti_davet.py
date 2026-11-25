@@ -107,7 +107,14 @@ def test_cf_html_ofsetleri():
 
 
 def test_excel_aralik_ve_mac_disi():
-    assert pano.excel_aralik(16) == "C13:M28" and pano.excel_aralik(1) == "C13:M13"
+    assert pano.excel_aralik(16) == "13:28" and pano.excel_aralik(1) == "13:13"
     import sys
     if sys.platform != "win32":
         assert pano.excel_kopyala("x.xlsx", 3) is False      # Mac'te HTML yoluna düşer
+
+
+def test_kopya_dosyasi_adi_yalniz_tarih():
+    """Kullanıcının açık davet dosyasıyla aynı adı taşımasın (Excel aynı adlı iki kitabı açamaz)."""
+    yol = cikti_davet.kopya_dosyasi([[1, "L", "T", "d", "r", "m", "1", "c", "s", "e", "08:00"]], D25)
+    assert yol.name == "25.11.2026.xlsx" and yol.name != cikti_davet.dosya_adi(D25)
+    assert yol.parent.name.startswith("CrushCall_") and yol.is_file()

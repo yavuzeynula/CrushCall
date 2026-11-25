@@ -83,18 +83,24 @@ def kopyala(html: str, metin: str, tk_kok=None) -> bool:
 # Excel "Insert Copied Cells" seçeneğini yalnız kendi içinden yapılan kopyada
 # gösterir; dışarıdan gelen HTML'de yalnız "Paste" çıkar (Yavuz 2026-11-24).
 # Bu yüzden dosya kullanıcının açık Excel'inde açılır ve satırları Excel kopyalar.
+# Tüm satır kopyalanır: satır başlığına yapıştırılabilir, satır yüksekliği de gelir.
+# Excel aynı adlı iki kitabı açamaz: önceki CrushCall kopyası (aynı ad, başka geçici klasör) kapatılır.
 _EXCEL_BETIK = r"""
 $ErrorActionPreference = 'Stop'
 $yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK
 try { $x = [Runtime.InteropServices.Marshal]::GetActiveObject('Excel.Application') }
 catch { $x = New-Object -ComObject Excel.Application }
 $x.Visible = $true
+$ad = Split-Path $yol -Leaf
 $wb = $null
-foreach ($w in $x.Workbooks) { if ($w.FullName -eq $yol) { $wb = $w } }
+foreach ($w in @($x.Workbooks)) {
+  if ($w.FullName -eq $yol) { $wb = $w }
+  elseif ($w.Name -eq $ad -and $w.FullName -like '*\CrushCall_*') { $w.Close($false) }
+}
 if (-not $wb) { $wb = $x.Workbooks.Open($yol) }
 $ws = $wb.Worksheets.Item(1)
 $ws.Activate() | Out-Null
-$r = $ws.Range($aralik)
+$r = $ws.Rows($aralik)
 $r.Select() | Out-Null
 $r.Copy() | Out-Null
 'OK'
@@ -102,12 +108,12 @@ $r.Copy() | Out-Null
 
 
 def excel_aralik(satir_sayisi: int, ilk: int = 13) -> str:
-    """Davet dosyasında sarı veri satırları (C–M sütunları)."""
-    return f"C{ilk}:M{ilk + satir_sayisi - 1}"
+    """Davet dosyasında veri satırları (tüm satır)."""
+    return f"{ilk}:{ilk + satir_sayisi - 1}"
 
 
 def excel_kopyala(dosya, satir_sayisi: int) -> bool:
-    """Dosyayı açık Excel'de açıp sarı satırları Excel'e kopyalatır. Yalnız Windows; olmazsa False."""
+    """Dosyayı açık Excel'de açıp veri satırlarını Excel'e kopyalatır. Yalnız Windows; olmazsa False."""
     if sys.platform != "win32" or satir_sayisi < 1:
         return False
     import os

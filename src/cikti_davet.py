@@ -2,6 +2,7 @@
 import html as _html
 from copy import copy
 from datetime import date, time
+import tempfile
 from pathlib import Path
 
 from openpyxl import load_workbook
@@ -47,7 +48,13 @@ def dosya_adi(tarih: date) -> str:
     return f"Laboratory_Daily_Notification_Invitation_List_{tarih:%d.%m.%Y}.xlsx"
 
 
-def kaydet(satirlar_: list[list], tarih: date, klasor: Path) -> Path:
+def kopya_dosyasi(satirlar_: list[list], tarih: date) -> Path:
+    """Copy rows için geçici dosya. Adı yalnız tarih: kullanıcının açık davet dosyasıyla
+    aynı adı taşımasın (Excel aynı adlı iki kitabı açamaz)."""
+    return kaydet(satirlar_, tarih, Path(tempfile.mkdtemp(prefix="CrushCall_")), f"{tarih:%d.%m.%Y}.xlsx")
+
+
+def kaydet(satirlar_: list[list], tarih: date, klasor: Path, ad: str | None = None) -> Path:
     wb = load_workbook(SABLON)
     ws = wb.active
     ws.title = f"{tarih:%d.%m.%Y}"
@@ -68,7 +75,7 @@ def kaydet(satirlar_: list[list], tarih: date, klasor: Path) -> Path:
             ws.cell(r, 5).fill = PatternFill("solid", fgColor="FF" + YESIL)
         satir_sayisi = max(str(v).count("\n") + 1 for v in s)
         ws.row_dimensions[r].height = max(30, 15 * satir_sayisi)
-    yol = Path(klasor) / dosya_adi(tarih)
+    yol = Path(klasor) / (ad or dosya_adi(tarih))
     try:
         wb.save(yol)
     except PermissionError as e:
