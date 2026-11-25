@@ -1,0 +1,1806 @@
+﻿[   0s] > git describe --tags --abbrev=0
+[   0s] > git diff --name-only v0.1.3..HEAD
+[   0s] EXE derleniyor: --full
+[   0s] > C:\derleme\CrushCall\build\venv\Scripts\python.exe -m pip install -q --require-hashes --no-deps -r C:\derleme\CrushCall\requirements.txt
+[   2s] System.Management.Automation.RemoteException
+[   2s] [notice] A new release of pip is available: 25.0.1 -> 26.3
+[   2s] [notice] To update, run: C:\derleme\CrushCall\build\venv\Scripts\python.exe -m pip install --upgrade pip
+[   2s] > C:\derleme\CrushCall\build\venv\Scripts\python.exe -m pip check
+[   3s] No broken requirements found.
+[   3s] > C:\Users\yavuz\tools\tedarik\Scripts\python.exe -X utf8 C:\Users\yavuz\tools\tedarik\tara.py --disable-pip -r C:\derleme\CrushCall\requirements.txt
+[   4s] No known vulnerabilities found
+[   6s] > C:\derleme\CrushCall\build\venv\Scripts\python.exe -m pytest -q
+[   8s] ..s..................................................................... [ 44%]
+[  25s] ........................................................................ [ 88%]
+[  25s] ..................                                                       [100%]
+[  26s] > C:\derleme\CrushCall\build\venv\Scripts\python.exe -m PyInstaller --noconfirm --clean --distpath dist --workpath build\work build\CrushCall.spec
+[  26s] 123 INFO: PyInstaller: 6.19.0, contrib hooks: 2026.4
+[  26s] 123 INFO: Python: 3.12.10
+[  26s] 150 INFO: Platform: Windows-11-10.0.26300-SP0
+[  26s] 150 INFO: Python environment: C:\derleme\CrushCall\build\venv
+[  26s] 152 INFO: Removing temporary files and cleaning cache in C:\Users\yavuz\AppData\Local\pyinstaller
+[  33s] 7436 INFO: Module search paths (PYTHONPATH):
+[  33s] ['C:\\derleme\\CrushCall',
+[  33s]  'C:\\Program Files\\Python312\\python312.zip',
+[  33s]  'C:\\Program Files\\Python312\\DLLs',
+[  33s]  'C:\\Program Files\\Python312\\Lib',
+[  33s]  'C:\\Program Files\\Python312',
+[  33s]  'C:\\derleme\\CrushCall\\build\\venv',
+[  33s]  'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages',
+[  33s]  'C:\\derleme\\CrushCall']
+[  33s] 7697 INFO: Appending 'datas' from .spec
+[  33s] 7713 INFO: checking Analysis
+[  33s] 7713 INFO: Building Analysis because Analysis-00.toc is non existent
+[  33s] 7713 INFO: Looking for Python shared library...
+[  33s] 7713 INFO: Using Python shared library: C:\Program Files\Python312\python312.dll
+[  33s] 7713 INFO: Running Analysis Analysis-00.toc
+[  33s] 7713 INFO: Target bytecode optimization level: 0
+[  33s] 7713 INFO: Initializing module dependency graph...
+[  33s] 7713 INFO: Initializing module graph hook caches...
+[  33s] 7726 INFO: Analyzing modules for base_library.zip ...
+[  35s] 8831 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  36s] 10126 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  37s] 10921 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  37s] 11298 INFO: Caching module dependency graph...
+[  37s] 11325 INFO: Analyzing C:\derleme\CrushCall\launcher.py
+[  37s] 11332 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+[  37s] 11332 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+[  37s] 11559 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  37s] 11625 INFO: Processing standard module hook 'hook-PIL.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  37s] 11704 INFO: Processing standard module hook 'hook-PIL.Image.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  38s] 12022 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  38s] 12038 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  38s] 12180 INFO: Processing standard module hook 'hook-PIL.ImageFilter.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  38s] 12413 INFO: Processing standard module hook 'hook-openpyxl.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+[  39s] 13140 INFO: Processing standard module hook 'hook-cryptography.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+[  40s] 13921 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
+[  40s] 14197 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  40s] 14197 INFO: Analyzing hidden import 'openpyxl.compat.abc'
+[  40s] 14206 INFO: Analyzing hidden import 'openpyxl.compat.product'
+[  40s] 14206 INFO: Analyzing hidden import 'openpyxl.compat.singleton'
+[  40s] 14208 INFO: Analyzing hidden import 'openpyxl.descriptors.slots'
+[  40s] 14208 INFO: Analyzing hidden import 'openpyxl.packaging.interface'
+[  40s] 14208 INFO: Analyzing hidden import 'openpyxl.utils.dataframe'
+[  40s] 14208 INFO: Analyzing hidden import 'openpyxl.utils.inference'
+[  40s] 14214 INFO: Analyzing hidden import 'openpyxl.worksheet.cell_watch'
+[  40s] 14214 INFO: Analyzing hidden import 'openpyxl.worksheet.controls'
+[  40s] 14220 INFO: Analyzing hidden import 'openpyxl.worksheet.custom'
+[  40s] 14220 INFO: Analyzing hidden import 'openpyxl.worksheet.errors'
+[  40s] 14220 INFO: Analyzing hidden import 'openpyxl.worksheet.picture'
+[  40s] 14220 INFO: Analyzing hidden import 'openpyxl.worksheet.smart_tag'
+[  40s] 14220 INFO: Analyzing hidden import 'PIL.AvifImagePlugin'
+[  40s] 14230 INFO: Analyzing hidden import 'PIL.BdfFontFile'
+[  40s] 14234 INFO: Analyzing hidden import 'PIL.BlpImagePlugin'
+[  40s] 14247 INFO: Analyzing hidden import 'PIL.BufrStubImagePlugin'
+[  40s] 14247 INFO: Analyzing hidden import 'PIL.ContainerIO'
+[  40s] 14247 INFO: Analyzing hidden import 'PIL.CurImagePlugin'
+[  40s] 14261 INFO: Analyzing hidden import 'PIL.DcxImagePlugin'
+[  40s] 14263 INFO: Analyzing hidden import 'PIL.DdsImagePlugin'
+[  40s] 14280 INFO: Analyzing hidden import 'PIL.EpsImagePlugin'
+[  40s] 14291 INFO: Analyzing hidden import 'PIL.FitsImagePlugin'
+[  40s] 14291 INFO: Analyzing hidden import 'PIL.FliImagePlugin'
+[  40s] 14297 INFO: Analyzing hidden import 'PIL.FpxImagePlugin'
+[  40s] 14305 INFO: Analyzing hidden import 'PIL.FtexImagePlugin'
+[  40s] 14305 INFO: Analyzing hidden import 'PIL.GbrImagePlugin'
+[  40s] 14305 INFO: Analyzing hidden import 'PIL.GdImageFile'
+[  40s] 14305 INFO: Analyzing hidden import 'PIL.GribStubImagePlugin'
+[  40s] 14313 INFO: Analyzing hidden import 'PIL.Hdf5StubImagePlugin'
+[  40s] 14313 INFO: Analyzing hidden import 'PIL.IcnsImagePlugin'
+[  40s] 14333 INFO: Analyzing hidden import 'PIL.IcoImagePlugin'
+[  40s] 14347 INFO: Analyzing hidden import 'PIL.ImImagePlugin'
+[  40s] 14362 INFO: Analyzing hidden import 'PIL.ImageEnhance'
+[  40s] 14362 INFO: Analyzing hidden import 'PIL.ImageMath'
+[  40s] 14376 INFO: Analyzing hidden import 'PIL.ImageMorph'
+[  40s] 14378 INFO: Analyzing hidden import 'PIL.ImageTransform'
+[  40s] 14378 INFO: Analyzing hidden import 'PIL.ImtImagePlugin'
+[  40s] 14378 INFO: Analyzing hidden import 'PIL.IptcImagePlugin'
+[  40s] 14390 INFO: Analyzing hidden import 'PIL.McIdasImagePlugin'
+[  40s] 14390 INFO: Analyzing hidden import 'PIL.MicImagePlugin'
+[  40s] 14394 INFO: Analyzing hidden import 'PIL.MpegImagePlugin'
+[  40s] 14394 INFO: Analyzing hidden import 'PIL.MspImagePlugin'
+[  40s] 14394 INFO: Analyzing hidden import 'PIL.PSDraw'
+[  40s] 14394 INFO: Analyzing hidden import 'PIL.PalmImagePlugin'
+[  40s] 14404 INFO: Analyzing hidden import 'PIL.PcdImagePlugin'
+[  40s] 14411 INFO: Analyzing hidden import 'PIL.PcfFontFile'
+[  40s] 14419 INFO: Analyzing hidden import 'PIL.PdfImagePlugin'
+[  40s] 14447 INFO: Analyzing hidden import 'PIL.PixarImagePlugin'
+[  40s] 14447 INFO: Analyzing hidden import 'PIL.PsdImagePlugin'
+[  40s] 14461 INFO: Analyzing hidden import 'PIL.QoiImagePlugin'
+[  40s] 14461 INFO: Analyzing hidden import 'PIL.SgiImagePlugin'
+[  40s] 14475 INFO: Analyzing hidden import 'PIL.SpiderImagePlugin'
+[  40s] 14477 INFO: Processing standard module hook 'hook-PIL.SpiderImagePlugin.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  40s] 14477 INFO: Analyzing hidden import 'PIL.SunImagePlugin'
+[  40s] 14477 INFO: Analyzing hidden import 'PIL.TarIO'
+[  40s] 14477 INFO: Analyzing hidden import 'PIL.TgaImagePlugin'
+[  40s] 14494 INFO: Analyzing hidden import 'PIL.WalImageFile'
+[  40s] 14494 INFO: Analyzing hidden import 'PIL.WebPImagePlugin'
+[  40s] 14503 INFO: Analyzing hidden import 'PIL.WmfImagePlugin'
+[  40s] 14503 INFO: Analyzing hidden import 'PIL.XVThumbImagePlugin'
+[  40s] 14509 INFO: Analyzing hidden import 'PIL.XbmImagePlugin'
+[  40s] 14509 INFO: Analyzing hidden import 'PIL.XpmImagePlugin'
+[  40s] 14518 INFO: Analyzing hidden import 'PIL.__main__'
+[  40s] 14518 INFO: Analyzing hidden import 'PIL._tkinter_finder'
+[  40s] 14518 INFO: Analyzing hidden import 'PIL.report'
+[  40s] 14518 INFO: Analyzing hidden import 'cryptography.cobblestone'
+[  40s] 14518 INFO: Analyzing hidden import 'cryptography.exceptions'
+[  40s] 14518 INFO: Analyzing hidden import 'cryptography.fernet'
+[  40s] 14546 INFO: Analyzing hidden import 'cryptography.hazmat._oid'
+[  40s] 14546 INFO: Analyzing hidden import 'cryptography.hazmat.asn1'
+[  40s] 14559 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
+[  40s] 14559 INFO: SetuptoolsInfo: initializing cached setuptools info...
+[  41s] 15012 INFO: Analyzing hidden import 'cryptography.hazmat.backends'
+[  41s] 15039 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.asymmetric.dh'
+[  41s] 15052 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.asymmetric.dsa'
+[  41s] 15052 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.asymmetric.ed448'
+[  41s] 15052 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.asymmetric.mldsa'
+[  41s] 15068 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.asymmetric.mlkem'
+[  41s] 15068 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.asymmetric.types'
+[  41s] 15068 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.ciphers.aead'
+[  41s] 15068 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.cmac'
+[  41s] 15068 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.constant_time'
+[  41s] 15081 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.hpke'
+[  41s] 15081 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf'
+[  41s] 15081 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.argon2'
+[  41s] 15081 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.concatkdf'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.hkdf'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.kbkdf'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.pbkdf2'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.scrypt'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.kdf.x963kdf'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.keywrap'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.poly1305'
+[  41s] 15084 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.serialization'
+[  41s] 15125 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.serialization.pkcs12'
+[  41s] 15222 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.serialization.pkcs7'
+[  41s] 15235 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.twofactor'
+[  41s] 15235 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.twofactor.hotp'
+[  41s] 15239 INFO: Analyzing hidden import 'cryptography.hazmat.primitives.twofactor.totp'
+[  41s] 15242 INFO: Analyzing hidden import 'cryptography.x509.ocsp'
+[  41s] 15249 INFO: Analyzing hidden import 'aifc'
+[  41s] 15277 INFO: Analyzing hidden import 'asyncio'
+[  41s] 15403 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  41s] 15647 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  42s] 15916 INFO: Analyzing hidden import 'asyncio.__main__'
+[  42s] 15934 INFO: Analyzing hidden import 'bdb'
+[  42s] 15949 INFO: Analyzing hidden import 'cProfile'
+[  42s] 16026 INFO: Analyzing hidden import 'cgi'
+[  42s] 16098 INFO: Analyzing hidden import 'cgitb'
+[  42s] 16199 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  42s] 16252 INFO: Analyzing hidden import 'cmath'
+[  42s] 16267 INFO: Analyzing hidden import 'compileall'
+[  42s] 16283 INFO: Analyzing hidden import 'configparser'
+[  42s] 16299 INFO: Analyzing hidden import 'ctypes._aix'
+[  42s] 16311 INFO: Analyzing hidden import 'ctypes.macholib'
+[  42s] 16316 INFO: Analyzing hidden import 'ctypes.macholib.dyld'
+[  42s] 16320 INFO: Analyzing hidden import 'ctypes.util'
+[  42s] 16330 INFO: Analyzing hidden import 'ctypes.wintypes'
+[  42s] 16334 INFO: Analyzing hidden import 'dbm'
+[  42s] 16338 INFO: Analyzing hidden import 'dbm.dumb'
+[  42s] 16345 INFO: Analyzing hidden import 'dbm.gnu'
+[  42s] 16345 INFO: Analyzing hidden import 'difflib'
+[  42s] 16375 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  42s] 16377 INFO: Analyzing hidden import 'doctest'
+[  42s] 16545 INFO: Analyzing hidden import 'email.mime'
+[  42s] 16547 INFO: Analyzing hidden import 'email.mime.application'
+[  42s] 16549 INFO: Analyzing hidden import 'email.mime.audio'
+[  42s] 16549 INFO: Analyzing hidden import 'email.mime.image'
+[  42s] 16553 INFO: Analyzing hidden import 'email.mime.message'
+[  42s] 16553 INFO: Analyzing hidden import 'email.mime.multipart'
+[  42s] 16553 INFO: Analyzing hidden import 'email.mime.text'
+[  42s] 16556 INFO: Analyzing hidden import 'faulthandler'
+[  42s] 16556 INFO: Analyzing hidden import 'fileinput'
+[  42s] 16565 INFO: Analyzing hidden import 'graphlib'
+[  42s] 16569 INFO: Analyzing hidden import 'html.parser'
+[  42s] 16587 INFO: Analyzing hidden import 'http.cookies'
+[  42s] 16587 INFO: Analyzing hidden import 'imaplib'
+[  42s] 16624 INFO: Analyzing hidden import 'imghdr'
+[  42s] 16624 INFO: Analyzing hidden import 'importlib.resources.simple'
+[  42s] 16624 INFO: Analyzing hidden import 'importlib.simple'
+[  42s] 16632 INFO: Analyzing hidden import 'json.tool'
+[  42s] 16634 INFO: Analyzing hidden import 'logging.config'
+[  42s] 16705 INFO: Analyzing hidden import 'mailbox'
+[  42s] 16749 INFO: Analyzing hidden import 'mailcap'
+[  42s] 16765 INFO: Analyzing hidden import 'modulefinder'
+[  42s] 16789 INFO: Analyzing hidden import 'nntplib'
+[  43s] 16807 INFO: Analyzing hidden import 'pickletools'
+[  43s] 16833 INFO: Analyzing hidden import 'pipes'
+[  43s] 16838 INFO: Analyzing hidden import 'plistlib'
+[  43s] 16859 INFO: Analyzing hidden import 'poplib'
+[  43s] 16866 INFO: Analyzing hidden import 'pyclbr'
+[  43s] 16874 INFO: Analyzing hidden import 'rlcompleter'
+[  43s] 16877 INFO: Analyzing hidden import 'sched'
+[  43s] 16881 INFO: Analyzing hidden import 'shelve'
+[  43s] 16885 INFO: Processing standard module hook 'hook-shelve.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  43s] 16885 INFO: Analyzing hidden import 'site'
+[  43s] 16901 INFO: Analyzing hidden import 'sndhdr'
+[  43s] 16921 INFO: Analyzing hidden import 'sqlite3'
+[  43s] 16921 INFO: Processing standard module hook 'hook-sqlite3.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  43s] 17160 INFO: Analyzing hidden import 'sqlite3.__main__'
+[  43s] 17160 INFO: Analyzing hidden import 'sqlite3.dump'
+[  43s] 17160 INFO: Analyzing hidden import 'sunau'
+[  43s] 17174 INFO: Analyzing hidden import 'symtable'
+[  43s] 17174 INFO: Analyzing hidden import 'tabnanny'
+[  43s] 17191 INFO: Analyzing hidden import 'telnetlib'
+[  43s] 17207 INFO: Analyzing hidden import 'timeit'
+[  43s] 17207 INFO: Analyzing hidden import 'tkinter.__main__'
+[  43s] 17207 INFO: Analyzing hidden import 'tkinter.colorchooser'
+[  43s] 17207 INFO: Analyzing hidden import 'tkinter.dnd'
+[  43s] 17217 INFO: Analyzing hidden import 'tkinter.scrolledtext'
+[  43s] 17223 INFO: Analyzing hidden import 'tkinter.tix'
+[  43s] 17261 INFO: Analyzing hidden import 'tomllib'
+[  43s] 17291 INFO: Analyzing hidden import 'trace'
+[  43s] 17308 INFO: Analyzing hidden import 'unittest.__main__'
+[  43s] 17308 INFO: Analyzing hidden import 'unittest.mock'
+[  43s] 17373 INFO: Analyzing hidden import 'urllib.robotparser'
+[  43s] 17379 INFO: Analyzing hidden import 'uu'
+[  43s] 17379 INFO: Analyzing hidden import 'winsound'
+[  43s] 17385 INFO: Analyzing hidden import 'wsgiref'
+[  43s] 17385 INFO: Analyzing hidden import 'wsgiref.handlers'
+[  43s] 17399 INFO: Analyzing hidden import 'wsgiref.simple_server'
+[  43s] 17406 INFO: Analyzing hidden import 'wsgiref.types'
+[  43s] 17406 INFO: Analyzing hidden import 'wsgiref.validate'
+[  43s] 17413 INFO: Analyzing hidden import 'xdrlib'
+[  43s] 17423 INFO: Analyzing hidden import 'xml.dom'
+[  43s] 17423 INFO: Processing standard module hook 'hook-xml.dom.domreg.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  43s] 17427 INFO: Analyzing hidden import 'xml.dom.NodeFilter'
+[  43s] 17427 INFO: Analyzing hidden import 'xml.dom.expatbuilder'
+[  43s] 17538 INFO: Analyzing hidden import 'xmlrpc.server'
+[  43s] 17560 INFO: Analyzing hidden import 'zipapp'
+[  43s] 17566 INFO: Analyzing hidden import 'zipfile.__main__'
+[  43s] 17566 INFO: Analyzing hidden import 'zoneinfo'
+[  43s] 17568 INFO: Processing standard module hook 'hook-zoneinfo.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+[  43s] 17588 INFO: Processing module hooks (post-graph stage)...
+[  43s] 17588 WARNING: Hidden import "tzdata" not found!
+[  43s] 17605 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks'
+[  43s] 17618 INFO: Performing binary vs. data reclassification (1372 entries)
+[  43s] 17700 INFO: Looking for ctypes DLLs
+[  43s] 17706 INFO: Analyzing run-time hooks ...
+[  43s] 17708 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+[  43s] 17710 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+[  43s] 17712 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+[  43s] 17714 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+[  43s] 17714 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+[  43s] 17743 INFO: Creating base_library.zip...
+[  43s] 17763 INFO: Looking for dynamic libraries
+[  44s] 18139 INFO: Extra DLL search directories (AddDllDirectory): []
+[  44s] 18139 INFO: Extra DLL search directories (PATH): []
+[  44s] 18345 WARNING: Library not found: could not resolve 'bcrypt.dll', dependency of 'C:\\Program Files\\Python312\\python312.dll'.
+[  44s] 18345 WARNING: Library not found: could not resolve 'VERSION.dll', dependency of 'C:\\Program Files\\Python312\\python312.dll'.
+[  44s] 18347 WARNING: Library not found: could not resolve 'WINMM.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\winsound.pyd'.
+[  44s] 18347 WARNING: Library not found: could not resolve 'IPHLPAPI.DLL', dependency of 'C:\\Program Files\\Python312\\DLLs\\_socket.pyd'.
+[  44s] 18347 WARNING: Library not found: could not resolve 'PROPSYS.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\_wmi.pyd'.
+[  44s] 18355 WARNING: Library not found: could not resolve 'bcryptprimitives.dll', dependency of 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd'.
+[  44s] 18355 WARNING: Library not found: could not resolve 'ntdll.dll', dependency of 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\cryptography\\hazmat\\bindings\\_rust.pyd'.
+[  44s] 18357 WARNING: Library not found: could not resolve 'PSAPI.DLL', dependency of 'C:\\derleme\\CrushCall\\build\\venv\\Lib\\site-packages\\PIL\\_imagingtk.cp312-win_amd64.pyd'.
+[  44s] 18365 WARNING: Library not found: could not resolve 'bcrypt.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\libcrypto-3.dll'.
+[  44s] 18365 WARNING: Library not found: could not resolve 'USERENV.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\tcl86t.dll'.
+[  44s] 18365 WARNING: Library not found: could not resolve 'NETAPI32.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\tcl86t.dll'.
+[  44s] 18365 WARNING: Library not found: could not resolve 'COMDLG32.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\tk86t.dll'.
+[  44s] 18365 WARNING: Library not found: could not resolve 'IMM32.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\tk86t.dll'.
+[  44s] 18365 WARNING: Library not found: could not resolve 'COMCTL32.dll', dependency of 'C:\\Program Files\\Python312\\DLLs\\tk86t.dll'.
+[  44s] 18381 INFO: Warnings written to C:\derleme\CrushCall\build\work\CrushCall\warn-CrushCall.txt
+[  44s] 18453 INFO: Graph cross-reference written to C:\derleme\CrushCall\build\work\CrushCall\xref-CrushCall.html
+[  44s] 18494 INFO: checking PYZ
+[  44s] 18494 INFO: Building PYZ because PYZ-00.toc is non existent
+[  44s] 18494 INFO: Building PYZ (ZlibArchive) C:\derleme\CrushCall\build\work\CrushCall\PYZ-00.pyz
+[  45s] 18989 INFO: Building PYZ (ZlibArchive) C:\derleme\CrushCall\build\work\CrushCall\PYZ-00.pyz completed successfully.
+[  45s] 19000 INFO: checking PKG
+[  45s] 19000 INFO: Building PKG because PKG-00.toc is non existent
+[  45s] 19000 INFO: Building PKG (CArchive) CrushCall.pkg
+[  45s] 19024 INFO: Building PKG (CArchive) CrushCall.pkg completed successfully.
+[  45s] 19024 INFO: Bootloader C:\derleme\CrushCall\build\venv\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+[  45s] 19024 INFO: checking EXE
+[  45s] 19024 INFO: Building EXE because EXE-00.toc is non existent
+[  45s] 19024 INFO: Building EXE from EXE-00.toc
+[  45s] 19024 INFO: Copying bootloader EXE to C:\derleme\CrushCall\build\work\CrushCall\CrushCall.exe
+[  45s] 19057 INFO: Copying icon to EXE
+[  45s] 19082 INFO: Copying 0 resources to EXE
+[  45s] 19082 INFO: Embedding manifest in EXE
+[  45s] 19109 INFO: Appending PKG archive to EXE
+[  45s] 19138 INFO: Fixing EXE headers
+[  45s] 19349 INFO: Building EXE from EXE-00.toc completed successfully.
+[  45s] 19358 INFO: checking COLLECT
+[  45s] 19358 INFO: Building COLLECT because COLLECT-00.toc is non existent
+[  45s] 19358 INFO: Removing dir C:\derleme\CrushCall\dist\CrushCall
+[  45s] 19458 INFO: Building COLLECT COLLECT-00.toc
+[  46s] 20068 INFO: Building COLLECT COLLECT-00.toc completed successfully.
+[  46s] 20084 INFO: Build complete! The results are available in: C:\derleme\CrushCall\dist
+[  46s] > C:\Program Files (x86)\Inno Setup 6\ISCC.exe build\installer.iss
+[  46s] Inno Setup 6 Command-Line Compiler
+[  46s] Copyright (C) 1997-2026 Jordan Russell. All rights reserved.
+[  46s] Portions Copyright (C) 2000-2026 Martijn Laan. All rights reserved.
+[  46s] Portions Copyright (C) 2001-2004 Alex Yackimoff. All rights reserved.
+[  46s] https://www.innosetup.com
+[  46s] 
+[  46s] Compiler engine version: Inno Setup 6.7.2
+[  46s] Non-commercial use only
+[  46s] 
+[  46s] Preprocessing
+[  46s]    Reading file: C:\Program Files (x86)\Inno Setup 6\ISPPBuiltins.iss
+[  46s] Parsing [Setup] section, line 11
+[  46s] Parsing [Setup] section, line 12
+[  46s] Parsing [Setup] section, line 13
+[  46s] Parsing [Setup] section, line 14
+[  46s] Parsing [Setup] section, line 15
+[  46s] Parsing [Setup] section, line 16
+[  46s] Parsing [Setup] section, line 17
+[  46s] Parsing [Setup] section, line 18
+[  46s] Parsing [Setup] section, line 19
+[  46s] Parsing [Setup] section, line 20
+[  46s] Parsing [Setup] section, line 21
+[  46s] Parsing [Setup] section, line 22
+[  46s] Parsing [Setup] section, line 23
+[  46s] Parsing [Setup] section, line 24
+[  46s] Parsing [Setup] section, line 26
+[  46s] Parsing [Setup] section, line 27
+[  46s] Reading file (WizardImageFile)
+[  46s] Reading file (WizardSmallImageFile)
+[  46s] Preparing Setup program executable
+[  46s]    Verification successful
+[  46s]    Updating icons (Setup.e32)
+[  46s]    Updating version info (Setup.e32)
+[  46s] Determining language code pages
+[  46s] Parsing [Languages] section, line 30
+[  46s]    Reading file: C:\Program Files (x86)\Inno Setup 6\Default.isl
+[  46s]    Messages in script file
+[  46s] Reading default messages from Default.isl
+[  46s] Parsing [Languages] section, line 30
+[  46s]    Reading file: C:\Program Files (x86)\Inno Setup 6\Default.isl
+[  46s] Parsing [LangOptions], [Messages], and [CustomMessages] sections
+[  46s]    Messages in script file
+[  46s] Reading [Code] section
+[  46s] Parsing [Tasks] section, line 33
+[  46s] Parsing [Icons] section, line 43
+[  46s] Parsing [Icons] section, line 44
+[  46s] Parsing [Icons] section, line 45
+[  46s] Parsing [InstallDelete] section, line 37
+[  46s] Parsing [Run] section, line 48
+[  46s] Parsing [Files] section, line 40
+[  46s] Deleting CrushCall-Setup.exe from output directory
+[  46s] Creating setup files
+[  46s]    Verification successful
+[  46s]    Updating icons (Setup.exe)
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\CrushCall.exe
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\ayar.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\cikti_davet.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\cikti_not.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\ekran.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\ikon.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\islem.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\kaynak.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\main.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\pano.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\tanimlar.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\updater.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\veri.py
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\version.txt
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\src\sablon\davet_sablonu.xlsx
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\base_library.zip
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\libcrypto-3.dll
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\libffi-8.dll
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\libssl-3.dll
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\license_secret.txt
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pyexpat.pyd
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\python3.dll
+[  46s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\python312.dll
+[  48s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\select.pyd
+[  48s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\sqlite3.dll
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tcl86t.dll
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tk86t.dll
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\unicodedata.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\VCRUNTIME140.dll
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\VCRUNTIME140_1.dll
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\winsound.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\zlib1.dll
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_asyncio.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_bz2.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_cffi_backend.cp312-win_amd64.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_ctypes.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_decimal.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_elementtree.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_hashlib.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_lzma.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_multiprocessing.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_overlapped.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_queue.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_socket.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_sqlite3.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_ssl.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tkinter.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_uuid.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_wmi.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_zoneinfo.pyd
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\cobblestone.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\exceptions.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\fernet.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\py.typed
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\utils.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\__about__.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\__init__.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\_oid.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\__init__.py
+[  49s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\asn1\asn1.py
+[  50s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\asn1\__init__.py
+[  50s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\backends\__init__.py
+[  50s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\backends\openssl\backend.py
+[  50s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\backends\openssl\__init__.py
+[  50s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust.pyd
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\openssl\binding.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\openssl\_conditional.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\openssl\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\asn1.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\cobblestone.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\declarative_asn1.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\exceptions.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\ocsp.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\pkcs12.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\pkcs7.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\test_support.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\x509.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\_openssl.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\__init__.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\aead.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\ciphers.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\cmac.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\dh.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\dsa.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\ec.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\ed25519.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\ed448.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\hashes.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\hmac.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\hpke.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\kdf.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\keys.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\keywrap.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\mldsa.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\mlkem.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\poly1305.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\rsa.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\x25519.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\x448.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\bindings\_rust\openssl\__init__.pyi
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\decrepit\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\decrepit\ciphers\algorithms.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\decrepit\ciphers\modes.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\decrepit\ciphers\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\cmac.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\constant_time.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\hashes.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\hmac.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\hpke.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\keywrap.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\padding.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\poly1305.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\_asymmetric.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\_cipheralgorithm.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\_modes.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\_serialization.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\dh.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\dsa.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\ec.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\ed25519.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\ed448.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\mldsa.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\mlkem.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\padding.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\rsa.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\types.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\utils.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\x25519.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\x448.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\asymmetric\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\ciphers\aead.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\ciphers\algorithms.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\ciphers\base.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\ciphers\modes.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\ciphers\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\argon2.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\concatkdf.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\hkdf.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\kbkdf.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\pbkdf2.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\scrypt.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\x963kdf.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\kdf\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\serialization\base.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\serialization\pkcs12.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\serialization\pkcs7.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\serialization\ssh.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\serialization\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\twofactor\hotp.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\twofactor\totp.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\hazmat\primitives\twofactor\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\base.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\certificate_transparency.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\extensions.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\general_name.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\name.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\ocsp.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\oid.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\verification.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography\x509\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\INSTALLER
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\METADATA
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\RECORD
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\REQUESTED
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\WHEEL
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\licenses\LICENSE
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\licenses\LICENSE.APACHE
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\licenses\LICENSE.BSD
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\sboms\cryptography-rust.cyclonedx.json
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\cryptography-50.0.2.dist-info\sboms\sbom.json
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile\incremental_tree.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile\xmlfile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\AUTHORS.txt
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\INSTALLER
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\LICENCE.python
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\LICENCE.rst
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\METADATA
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\RECORD
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\REQUESTED
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\top_level.txt
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\et_xmlfile-2.0.0.dist-info\WHEEL
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\_constants.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\cell\cell.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\cell\read_only.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\cell\rich_text.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\cell\text.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\cell\_writer.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\cell\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\area_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\axis.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\bar_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\bubble_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\chartspace.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\data_source.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\descriptors.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\error_bar.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\label.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\layout.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\legend.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\line_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\marker.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\picture.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\pie_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\pivot.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\plotarea.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\print_settings.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\radar_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\reader.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\reference.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\scatter_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\series.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\series_factory.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\shapes.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\stock_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\surface_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\text.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\title.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\trendline.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\updown_bars.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\_3d.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\_chart.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chart\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\chartsheet.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\custom.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\properties.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\protection.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\publish.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\relation.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\views.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\chartsheet\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\comments\author.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\comments\comments.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\comments\comment_sheet.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\comments\shape_writer.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\comments\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\compat\abc.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\compat\numbers.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\compat\product.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\compat\singleton.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\compat\strings.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\compat\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\base.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\container.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\excel.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\namespace.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\nested.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\sequence.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\serialisable.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\slots.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\descriptors\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\colors.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\connector.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\drawing.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\effect.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\fill.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\geometry.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\graphic.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\image.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\line.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\picture.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\properties.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\relation.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\spreadsheet_drawing.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\text.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\xdr.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\drawing\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\formatting\formatting.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\formatting\rule.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\formatting\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\formula\tokenizer.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\formula\translate.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\formula\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\core.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\custom.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\extended.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\interface.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\manifest.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\relationship.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\workbook.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\packaging\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\pivot\cache.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\pivot\fields.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\pivot\record.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\pivot\table.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\pivot\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\reader\drawings.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\reader\excel.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\reader\strings.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\reader\workbook.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\reader\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\alignment.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\borders.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\builtins.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\cell_style.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\colors.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\differential.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\fills.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\fonts.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\named_styles.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\numbers.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\protection.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\proxy.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\styleable.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\stylesheet.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\table.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\styles\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\bound_dictionary.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\cell.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\dataframe.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\datetime.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\escape.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\exceptions.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\formulas.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\indexed_list.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\inference.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\protection.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\units.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\utils\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\child.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\defined_name.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\external_reference.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\function_group.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\properties.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\protection.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\smart_tags.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\views.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\web.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\workbook.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\_writer.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\external_link\external.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\workbook\external_link\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\cell_range.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\cell_watch.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\controls.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\copier.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\custom.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\datavalidation.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\dimensions.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\drawing.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\errors.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\filters.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\formula.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\header_footer.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\hyperlink.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\merge.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\ole.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\page.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\pagebreak.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\picture.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\print_settings.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\properties.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\protection.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\related.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\scenario.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\smart_tag.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\table.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\views.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\worksheet.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\_reader.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\_read_only.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\_writer.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\_write_only.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\worksheet\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\writer\excel.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\writer\theme.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\writer\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\xml\constants.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\xml\functions.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl\xml\__init__.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\INSTALLER
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\LICENCE.rst
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\METADATA
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\RECORD
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\REQUESTED
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\top_level.txt
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\openpyxl-3.1.5.dist-info\WHEEL
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\AvifImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\BdfFontFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\BlpImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\BmpImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\BufrStubImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ContainerIO.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\CurImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\DcxImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\DdsImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\EpsImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ExifTags.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\features.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\FitsImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\FliImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\FontFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\FpxImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\FtexImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\GbrImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\GdImageFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\GifImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\GimpGradientFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\GimpPaletteFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\GribStubImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\Hdf5StubImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\IcnsImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\IcoImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\Image.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageChops.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageCms.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageColor.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageDraw.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageDraw2.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageEnhance.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageFilter.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageFont.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageGrab.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageMath.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageMode.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageMorph.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageOps.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImagePalette.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImagePath.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageQt.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageSequence.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageShow.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageStat.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageText.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageTk.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageTransform.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImageWin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\ImtImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\IptcImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\Jpeg2KImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\JpegImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\JpegPresets.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\McIdasImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\MicImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\MpegImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\MpoImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\MspImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PaletteFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PalmImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PcdImagePlugin.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PcfFontFile.py
+[  51s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PcxImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PdfImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PdfParser.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PixarImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PngImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PpmImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PsdImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\PSDraw.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\py.typed
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\QoiImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\report.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\SgiImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\SpiderImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\SunImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\TarIO.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\TgaImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\TiffImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\TiffTags.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\WalImageFile.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\WebPImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\WmfImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\XbmImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\XpmImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\XVThumbImagePlugin.py
+[  52s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_avif.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_avif.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_binary.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_deprecate.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imaging.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imaging.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingcms.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingcms.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingft.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingft.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingmath.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingmath.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingmorph.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingmorph.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingtk.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_imagingtk.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_tkinter_finder.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_typing.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_util.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_version.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_webp.cp312-win_amd64.pyd
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\_webp.pyi
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\__init__.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\PIL\__main__.py
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\INSTALLER
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\METADATA
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\RECORD
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\REQUESTED
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\top_level.txt
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\WHEEL
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\licenses\LICENSE
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\pillow-13.0.0.dist-info\sboms\pillow-13.0.0.cdx.json
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tcl8\8.4\platform-1.0.19.tm
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tcl8\8.4\platform\shell-1.1.4.tm
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tcl8\8.5\msgcat-1.6.1.tm
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tcl8\8.5\tcltest-2.5.8.tm
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\tcl8\8.6\http-2.9.8.tm
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\auto.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\clock.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\history.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\init.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\package.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\parray.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\safe.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tclIndex
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tm.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\word.tcl
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\ascii.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\big5.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cns11643.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1250.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1251.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1252.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1253.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1254.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1255.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1256.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1257.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp1258.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp437.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp737.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp775.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp850.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp852.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp855.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp857.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp860.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp861.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp862.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp863.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp864.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp865.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp866.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp869.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp874.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp932.enc
+[  53s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp936.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp949.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\cp950.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\dingbats.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\ebcdic.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\euc-cn.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\euc-jp.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\euc-kr.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\gb12345.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\gb1988.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\gb2312-raw.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\gb2312.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso2022-jp.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso2022-kr.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso2022.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-1.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-10.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-11.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-13.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-14.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-15.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-16.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-2.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-3.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-4.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-5.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-6.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-7.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-8.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\iso8859-9.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\jis0201.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\jis0208.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\jis0212.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\koi8-r.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\koi8-ru.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\koi8-t.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\koi8-u.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\ksc5601.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macCentEuro.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macCroatian.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macCyrillic.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macDingbats.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macGreek.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macIceland.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macJapan.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macRoman.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macRomania.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macThai.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macTurkish.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\macUkraine.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\shiftjis.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\symbol.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\encoding\tis-620.enc
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\http1.0\http.tcl
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\http1.0\pkgIndex.tcl
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\af.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\af_za.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ar.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ar_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ar_jo.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ar_lb.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ar_sy.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\be.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\bg.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\bn.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\bn_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ca.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\cs.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\da.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\de.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\de_at.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\de_be.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\el.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_au.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_be.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_bw.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_ca.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_gb.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_hk.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_ie.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_nz.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_ph.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_sg.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_za.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\en_zw.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\eo.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_ar.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_bo.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_cl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_co.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_cr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_do.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_ec.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_gt.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_hn.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_mx.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_ni.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_pa.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_pe.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_pr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_py.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_sv.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_uy.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\es_ve.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\et.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\eu.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\eu_es.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fa.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fa_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fa_ir.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fi.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fo.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fo_fo.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fr_be.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fr_ca.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\fr_ch.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ga.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ga_ie.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\gl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\gl_es.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\gv.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\gv_gb.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\he.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\hi.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\hi_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\hr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\hu.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\id.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\id_id.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\is.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\it.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\it_ch.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ja.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\kl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\kl_gl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ko.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\kok.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\kok_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ko_kr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\kw.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\kw_gb.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\lt.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\lv.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\mk.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\mr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\mr_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ms.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ms_my.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\mt.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\nb.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\nl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\nl_be.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\nn.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\pl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\pt.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\pt_br.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ro.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ru.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ru_ua.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sh.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sk.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sl.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sq.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sv.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\sw.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ta.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\ta_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\te.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\te_in.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\th.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\tr.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\uk.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\vi.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\zh.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\zh_cn.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\zh_hk.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\zh_sg.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\msgs\zh_tw.msg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\opt0.4\optparse.tcl
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\opt0.4\pkgIndex.tcl
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\CET
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\CST6CDT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Cuba
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\EET
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Egypt
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Eire
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\EST
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\EST5EDT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\GB
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\GB-Eire
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\GMT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\GMT+0
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\GMT-0
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\GMT0
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Greenwich
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Hongkong
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\HST
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Iceland
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Iran
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Israel
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Jamaica
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Japan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Kwajalein
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Libya
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\MET
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\MST
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\MST7MDT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Navajo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\NZ
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\NZ-CHAT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Poland
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Portugal
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\PRC
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\PST8PDT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\ROC
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\ROK
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Singapore
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Turkey
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\UCT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Universal
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\UTC
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\W-SU
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\WET
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Zulu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Abidjan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Accra
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Addis_Ababa
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Algiers
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Asmara
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Asmera
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Bamako
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Bangui
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Banjul
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Bissau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Blantyre
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Brazzaville
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Bujumbura
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Cairo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Casablanca
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Ceuta
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Conakry
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Dakar
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Dar_es_Salaam
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Djibouti
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Douala
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\El_Aaiun
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Freetown
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Gaborone
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Harare
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Johannesburg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Juba
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Kampala
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Khartoum
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Kigali
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Kinshasa
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Lagos
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Libreville
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Lome
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Luanda
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Lubumbashi
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Lusaka
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Malabo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Maputo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Maseru
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Mbabane
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Mogadishu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Monrovia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Nairobi
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Ndjamena
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Niamey
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Nouakchott
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Ouagadougou
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Porto-Novo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Sao_Tome
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Timbuktu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Tripoli
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Tunis
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Africa\Windhoek
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Adak
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Anchorage
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Anguilla
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Antigua
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Araguaina
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Aruba
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Asuncion
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Atikokan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Atka
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Bahia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Bahia_Banderas
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Barbados
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Belem
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Belize
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Blanc-Sablon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Boa_Vista
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Bogota
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Boise
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Buenos_Aires
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Cambridge_Bay
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Campo_Grande
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Cancun
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Caracas
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Catamarca
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Cayenne
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Cayman
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Chicago
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Chihuahua
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Ciudad_Juarez
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Coral_Harbour
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Cordoba
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Costa_Rica
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Creston
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Cuiaba
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Curacao
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Danmarkshavn
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Dawson
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Dawson_Creek
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Denver
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Detroit
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Dominica
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Edmonton
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Eirunepe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\El_Salvador
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Ensenada
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Fortaleza
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Fort_Nelson
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Fort_Wayne
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Glace_Bay
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Godthab
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Goose_Bay
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Grand_Turk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Grenada
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Guadeloupe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Guatemala
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Guayaquil
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Guyana
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Halifax
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Havana
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Hermosillo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indianapolis
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Inuvik
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Iqaluit
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Jamaica
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Jujuy
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Juneau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Knox_IN
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Kralendijk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\La_Paz
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Lima
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Los_Angeles
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Louisville
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Lower_Princes
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Maceio
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Managua
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Manaus
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Marigot
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Martinique
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Matamoros
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Mazatlan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Mendoza
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Menominee
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Merida
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Metlakatla
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Mexico_City
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Miquelon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Moncton
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Monterrey
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Montevideo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Montreal
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Montserrat
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Nassau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\New_York
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Nipigon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Nome
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Noronha
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Nuuk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Ojinaga
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Panama
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Pangnirtung
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Paramaribo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Phoenix
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Port-au-Prince
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Porto_Acre
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Porto_Velho
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Port_of_Spain
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Puerto_Rico
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Punta_Arenas
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Rainy_River
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Rankin_Inlet
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Recife
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Regina
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Resolute
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Rio_Branco
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Rosario
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Santarem
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Santa_Isabel
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Santiago
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Santo_Domingo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Sao_Paulo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Scoresbysund
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Shiprock
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Sitka
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\St_Barthelemy
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\St_Johns
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\St_Kitts
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\St_Lucia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\St_Thomas
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\St_Vincent
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Swift_Current
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Tegucigalpa
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Thule
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Thunder_Bay
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Tijuana
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Toronto
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Tortola
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Vancouver
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Virgin
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Whitehorse
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Winnipeg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Yakutat
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Yellowknife
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Buenos_Aires
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Catamarca
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\ComodRivadavia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Cordoba
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Jujuy
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\La_Rioja
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Mendoza
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Rio_Gallegos
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Salta
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\San_Juan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\San_Luis
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Tucuman
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Argentina\Ushuaia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Indianapolis
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Knox
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Marengo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Petersburg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Tell_City
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Vevay
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Vincennes
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Indiana\Winamac
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Kentucky\Louisville
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\Kentucky\Monticello
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\North_Dakota\Beulah
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\North_Dakota\Center
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\America\North_Dakota\New_Salem
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Casey
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Davis
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\DumontDUrville
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Macquarie
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Mawson
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\McMurdo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Palmer
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Rothera
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\South_Pole
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Syowa
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Troll
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Antarctica\Vostok
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Arctic\Longyearbyen
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Aden
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Almaty
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Amman
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Anadyr
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Aqtau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Aqtobe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ashgabat
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ashkhabad
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Atyrau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Baghdad
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Bahrain
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Baku
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Bangkok
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Barnaul
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Beirut
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Bishkek
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Brunei
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Calcutta
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Chita
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Choibalsan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Chongqing
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Chungking
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Colombo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Dacca
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Damascus
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Dhaka
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Dili
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Dubai
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Dushanbe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Famagusta
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Gaza
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Harbin
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Hebron
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Hong_Kong
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Hovd
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ho_Chi_Minh
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Irkutsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Istanbul
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Jakarta
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Jayapura
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Jerusalem
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kabul
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kamchatka
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Karachi
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kashgar
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kathmandu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Katmandu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Khandyga
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kolkata
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Krasnoyarsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kuala_Lumpur
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kuching
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Kuwait
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Macao
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Macau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Magadan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Makassar
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Manila
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Muscat
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Nicosia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Novokuznetsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Novosibirsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Omsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Oral
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Phnom_Penh
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Pontianak
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Pyongyang
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Qatar
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Qostanay
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Qyzylorda
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Rangoon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Riyadh
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Saigon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Sakhalin
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Samarkand
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Seoul
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Shanghai
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Singapore
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Srednekolymsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Taipei
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Tashkent
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Tbilisi
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Tehran
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Tel_Aviv
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Thimbu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Thimphu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Tokyo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Tomsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ujung_Pandang
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ulaanbaatar
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ulan_Bator
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Urumqi
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Ust-Nera
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Vientiane
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Vladivostok
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Yakutsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Yangon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Yekaterinburg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Asia\Yerevan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Azores
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Bermuda
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Canary
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Cape_Verde
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Faeroe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Faroe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Jan_Mayen
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Madeira
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Reykjavik
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\South_Georgia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\Stanley
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Atlantic\St_Helena
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\ACT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Adelaide
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Brisbane
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Broken_Hill
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Canberra
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Currie
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Darwin
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Eucla
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Hobart
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\LHI
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Lindeman
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Lord_Howe
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Melbourne
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\North
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\NSW
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Perth
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Queensland
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\South
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Sydney
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Tasmania
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Victoria
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\West
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Australia\Yancowinna
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Brazil\Acre
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Brazil\DeNoronha
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Brazil\East
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Brazil\West
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Atlantic
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Central
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Eastern
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Mountain
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Newfoundland
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Pacific
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Saskatchewan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Canada\Yukon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Chile\Continental
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Chile\EasterIsland
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+0
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+1
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+10
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+11
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+12
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+2
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+3
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+4
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+5
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+6
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+7
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+8
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT+9
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-0
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-1
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-10
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-11
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-12
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-13
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-14
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-2
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-3
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-4
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-5
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-6
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-7
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-8
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT-9
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\GMT0
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\Greenwich
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\UCT
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\Universal
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\UTC
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Etc\Zulu
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Amsterdam
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Andorra
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Astrakhan
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Athens
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Belfast
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Belgrade
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Berlin
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Bratislava
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Brussels
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Bucharest
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Budapest
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Busingen
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Chisinau
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Copenhagen
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Dublin
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Gibraltar
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Guernsey
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Helsinki
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Isle_of_Man
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Istanbul
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Jersey
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Kaliningrad
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Kiev
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Kirov
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Kyiv
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Lisbon
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Ljubljana
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\London
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Luxembourg
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Madrid
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Malta
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Mariehamn
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Minsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Monaco
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Moscow
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Nicosia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Oslo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Paris
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Podgorica
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Prague
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Riga
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Rome
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Samara
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\San_Marino
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Sarajevo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Saratov
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Simferopol
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Skopje
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Sofia
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Stockholm
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Tallinn
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Tirane
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Tiraspol
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Ulyanovsk
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Uzhgorod
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Vaduz
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Vatican
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Vienna
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Vilnius
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Volgograd
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Warsaw
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Zagreb
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Zaporozhye
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Europe\Zurich
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Antananarivo
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Chagos
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Christmas
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Cocos
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Comoro
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Kerguelen
+[  54s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Mahe
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Maldives
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Mauritius
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Mayotte
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Indian\Reunion
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Mexico\BajaNorte
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Mexico\BajaSur
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Mexico\General
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Apia
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Auckland
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Bougainville
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Chatham
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Chuuk
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Easter
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Efate
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Enderbury
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Fakaofo
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Fiji
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Funafuti
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Galapagos
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Gambier
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Guadalcanal
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Guam
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Honolulu
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Johnston
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Kanton
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Kiritimati
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Kosrae
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Kwajalein
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Majuro
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Marquesas
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Midway
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Nauru
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Niue
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Norfolk
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Noumea
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Pago_Pago
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Palau
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Pitcairn
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Pohnpei
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Ponape
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Port_Moresby
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Rarotonga
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Saipan
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Samoa
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Tahiti
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Tarawa
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Tongatapu
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Truk
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Wake
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Wallis
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\Pacific\Yap
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\AST4
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\AST4ADT
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\CST6
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\CST6CDT
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\EST5
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\EST5EDT
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\HST10
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\MST7
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\MST7MDT
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\PST8
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\PST8PDT
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\YST9
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\SystemV\YST9YDT
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Alaska
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Aleutian
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Arizona
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Central
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\East-Indiana
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Eastern
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Hawaii
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Indiana-Starke
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Michigan
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Mountain
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Pacific
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tcl_data\tzdata\US\Samoa
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\bgerror.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\button.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\choosedir.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\clrpick.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\comdlg.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\console.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\dialog.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\entry.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\focus.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\fontchooser.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\iconlist.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\icons.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\license.terms
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\listbox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\megawidget.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\menu.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\mkpsenc.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgbox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\obsolete.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\optMenu.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\palette.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\panedwindow.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\pkgIndex.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\safetk.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\scale.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\scrlbar.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\spinbox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\tclIndex
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\tearoff.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\text.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\tk.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\tkfbox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\unsupported.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\xmfbox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\logo.eps
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\logo100.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\logo64.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\logoLarge.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\logoMed.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\pwrdLogo.eps
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\pwrdLogo100.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\pwrdLogo150.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\pwrdLogo175.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\pwrdLogo200.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\pwrdLogo75.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\README
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\images\tai-ku.gif
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\cs.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\da.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\de.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\el.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\en.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\en_gb.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\eo.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\es.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\fi.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\fr.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\hu.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\it.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\nl.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\pl.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\pt.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\ru.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\sv.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\msgs\zh_cn.msg
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\altTheme.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\aquaTheme.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\button.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\clamTheme.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\classicTheme.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\combobox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\cursors.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\defaults.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\entry.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\fonts.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\menubutton.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\notebook.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\panedwindow.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\progress.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\scale.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\scrollbar.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\sizegrip.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\spinbox.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\treeview.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\ttk.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\utils.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\vistaTheme.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\winTheme.tcl
+[  55s]    Compressing: C:\derleme\CrushCall\build\..\dist\CrushCall\_internal\_tk_data\ttk\xpTheme.tcl
+[  56s]    Compressing Setup program executable
+[  56s]    Updating version info (Setup.exe)
+[  56s]    Updating manifest (Setup.exe)
+[  56s] 
+[  56s] 
+[  56s] Successful compile (10.203 sec). Resulting Setup program filename is:
+[  56s] C:\derleme\CrushCall\build\out\CrushCall-Setup.exe
+[  58s] Selftest gecti: dagitilan EXE yeni kodla aciliyor.
+[  58s] > gh release delete v0.1.4 --yes --cleanup-tag --repo yavuzeynula/CrushCall
+[  59s] release not found
+[  59s] > gh release create v0.1.4 C:\Users\yavuz\AppData\Local\Temp\crushcall_pub_ewv7gtdp\src.zip C:\derleme\CrushCall\build\out\CrushCall-Setup.exe --title v0.1.4 --notes Copy rows: kopya acik Excel'inde yapilir, Insert Copied Cells cikar
+[  59s] 
+[  59s] MIN_LAUNCHER: 2
+[  59s] SHA256: c1767cf72577f95ac110e97f5f3e3606c377fa69ca155ce074e9fe7f86c7e2f1
+[  59s] SETUP_SHA256: 80a08ed8ba2c44d0092671e9c273105793ce9e25cc90a30e3fbe9cbe238166c3 --repo yavuzeynula/CrushCall
