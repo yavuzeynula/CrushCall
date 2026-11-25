@@ -59,7 +59,8 @@ def main() -> int:
     kullanici = Path(tempfile.mkdtemp()) / cikti_davet.dosya_adi(TARIH)
     shutil.copy(cikti_davet.SABLON, kullanici)
     ps(KULLANICI_AC, KULLANICI=str(kullanici))
-    print("excel_kopyala:", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    for _ in range(2):        # ikinci basis: onceki ayni adli kopya kapanmali
+        print("excel_kopyala:", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
     ps(DENETIM, KULLANICI=str(kullanici))
     return 0
 
