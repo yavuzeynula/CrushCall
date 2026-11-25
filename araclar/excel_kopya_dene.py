@@ -22,8 +22,6 @@ TARIH = date(2026, 11, 25)
 
 # Yavuz gibi: dosyaya cift tiklar (kabuk acar, COM degil).
 KULLANICI_AC = r"""
-Get-Process EXCEL -ErrorAction SilentlyContinue | Stop-Process -Force
-Start-Sleep 2
 Invoke-Item $env:KULLANICI
 for ($i = 0; $i -lt 60; $i++) { Start-Sleep 1; if (Get-Process EXCEL -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle }) { break } }
 Start-Sleep 3
@@ -43,6 +41,7 @@ foreach ($r in 12..16) { $s = @(); foreach ($c in 3..13) { $s += ($ws.Cells.Item
 $x.CutCopyMode = $false
 foreach ($w in @($x.Workbooks)) { $w.Close($false) }
 $x.Quit()
+Start-Sleep 2; 'kalan excel islemi: ' + @(Get-Process EXCEL -ErrorAction SilentlyContinue).Count
 """
 
 
@@ -62,9 +61,12 @@ def main() -> int:
     # Yavuz'un kendi dosyası: aynı ad, başka klasör, şablondan (boş).
     kullanici = Path(tempfile.mkdtemp()) / cikti_davet.dosya_adi(TARIH)
     shutil.copy(cikti_davet.SABLON, kullanici)
+    ps("Get-Process EXCEL -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep 2")
+    # 1) hic Excel acik degilken basis  2) kullanici kendi dosyasini cift tiklayip acar, yine basar
+    #    (onceki ayni adli kopya kapanmali, kopya kullanicinin Excel'inde olmali)
+    print("excel_kopyala (Excel kapali):", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
     ps(KULLANICI_AC, KULLANICI=str(kullanici))
-    for _ in range(2):        # ikinci basis: onceki ayni adli kopya kapanmali, Excel takilmamali
-        print("excel_kopyala:", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
+    print("excel_kopyala (dosyan acik):", pano.excel_kopyala(cikti_davet.kopya_dosyasi(satirlar, TARIH), len(satirlar)))
     ps(DENETIM, KULLANICI=str(kullanici))
     return 0
 

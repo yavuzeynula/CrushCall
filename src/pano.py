@@ -83,29 +83,35 @@ def kopyala(html: str, metin: str, tk_kok=None) -> bool:
 # Excel "Insert Copied Cells" seçeneğini yalnız kendi içinden yapılan kopyada
 # gösterir; dışarıdan gelen HTML'de yalnız "Paste" çıkar (Yavuz 2026-11-24).
 # Bu yüzden dosya kullanıcının açık Excel'inde açılır ve satırları Excel kopyalar.
+# Dosya çift tıklar gibi (kabukla) açılır: COM ile "açık Excel"i aramak, kullanıcı Excel'i
+# henüz kayıt etmemişse ikinci bir Excel başlatıyordu; kopya oradaydı, kullanıcının
+# dosyasında yalnız "Insert" (boş satır) çıkıyordu (Yavuz 2026-11-25, VM'de doğrulandı).
+# Kitap, penceresi açılınca dosya adıyla (BindToMoniker) bulunur.
 # Tüm satır kopyalanır: satır başlığına yapıştırılabilir, satır yüksekliği de gelir.
-# Excel aynı adlı iki kitabı açamaz: önceki CrushCall kopyası (aynı ad, başka geçici klasör) kapatılır;
+# Excel aynı adlı iki kitabı açamaz: önceki CrushCall kopyası hâlâ açıksa kapatılır;
 # önce kopya bırakılır, yoksa Excel "panoda çok veri var" sorusunda takılır.
 _EXCEL_BETIK = r"""
 $ErrorActionPreference = 'Stop'
-$yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK
-try { $x = [Runtime.InteropServices.Marshal]::GetActiveObject('Excel.Application') }
-catch { $x = New-Object -ComObject Excel.Application }
-$x.Visible = $true
-$ad = Split-Path $yol -Leaf
-$wb = $null
-foreach ($w in @($x.Workbooks)) {
-  if ($w.FullName -eq $yol) { $wb = $w }
-  elseif ($w.Name -eq $ad -and $w.FullName -like '*\CrushCall_*') { $x.CutCopyMode = $false; $w.Close($false) }
+$yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK; $onceki = $env:CRUSHCALL_ONCEKI
+function Acik($p) { Test-Path -LiteralPath (Join-Path (Split-Path $p) ('~$' + (Split-Path $p -Leaf))) }
+function Dene($is) {
+  for ($i = 0; $i -lt 50; $i++) { try { return & $is } catch { Start-Sleep -Milliseconds 200 } }
+  & $is
 }
-if (-not $wb) { $wb = $x.Workbooks.Open($yol) }
-$ws = $wb.Worksheets.Item(1)
-$ws.Activate() | Out-Null
-$r = $ws.Rows($aralik)
-$r.Select() | Out-Null
-$r.Copy() | Out-Null
+if ($onceki -and (Acik $onceki)) {
+  Dene { $o = [Runtime.InteropServices.Marshal]::BindToMoniker($onceki); $o.Application.CutCopyMode = $false; $o.Close($false) } | Out-Null
+}
+Invoke-Item -LiteralPath $yol
+$ad = [IO.Path]::GetFileNameWithoutExtension($yol)
+for ($i = 0; $i -lt 300; $i++) {
+  if ((Acik $yol) -and (Get-Process EXCEL -ErrorAction SilentlyContinue | Where-Object { $_.MainWindowTitle -like "*$ad*" })) { break }
+  Start-Sleep -Milliseconds 200
+}
+$wb = Dene { [Runtime.InteropServices.Marshal]::BindToMoniker($yol) }
+Dene { $ws = $wb.Worksheets.Item(1); $ws.Activate() | Out-Null; $r = $ws.Rows($aralik); $r.Select() | Out-Null; $r.Copy() | Out-Null } | Out-Null
 'OK'
 """
+_onceki = None   # bu oturumda son açılan kopya dosyası
 
 
 def excel_aralik(satir_sayisi: int, ilk: int = 13) -> str:
@@ -118,11 +124,16 @@ def excel_kopyala(dosya, satir_sayisi: int) -> bool:
     if sys.platform != "win32" or satir_sayisi < 1:
         return False
     import os
-    ortam = {**os.environ, "CRUSHCALL_DOSYA": str(dosya), "CRUSHCALL_ARALIK": excel_aralik(satir_sayisi)}
+    global _onceki
+    ortam = {**os.environ, "CRUSHCALL_DOSYA": str(dosya), "CRUSHCALL_ARALIK": excel_aralik(satir_sayisi),
+             "CRUSHCALL_ONCEKI": str(_onceki or "")}
     try:
         r = subprocess.run(["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-Command", _EXCEL_BETIK],
                            env=ortam, capture_output=True, text=True, timeout=90,
                            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
     except (OSError, subprocess.TimeoutExpired):
         return False
-    return r.returncode == 0 and r.stdout.strip().endswith("OK")
+    if r.returncode == 0 and r.stdout.strip().endswith("OK"):
+        _onceki = dosya
+        return True
+    return False
