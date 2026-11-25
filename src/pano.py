@@ -84,7 +84,8 @@ def kopyala(html: str, metin: str, tk_kok=None) -> bool:
 # gösterir; dışarıdan gelen HTML'de yalnız "Paste" çıkar (Yavuz 2026-11-24).
 # Bu yüzden dosya kullanıcının açık Excel'inde açılır ve satırları Excel kopyalar.
 # Tüm satır kopyalanır: satır başlığına yapıştırılabilir, satır yüksekliği de gelir.
-# Excel aynı adlı iki kitabı açamaz: önceki CrushCall kopyası (aynı ad, başka geçici klasör) kapatılır.
+# Excel aynı adlı iki kitabı açamaz: önceki CrushCall kopyası (aynı ad, başka geçici klasör) kapatılır;
+# önce kopya bırakılır, yoksa Excel "panoda çok veri var" sorusunda takılır.
 _EXCEL_BETIK = r"""
 $ErrorActionPreference = 'Stop'
 $yol = $env:CRUSHCALL_DOSYA; $aralik = $env:CRUSHCALL_ARALIK
@@ -95,7 +96,7 @@ $ad = Split-Path $yol -Leaf
 $wb = $null
 foreach ($w in @($x.Workbooks)) {
   if ($w.FullName -eq $yol) { $wb = $w }
-  elseif ($w.Name -eq $ad -and $w.FullName -like '*\CrushCall_*') { $w.Close($false) }
+  elseif ($w.Name -eq $ad -and $w.FullName -like '*\CrushCall_*') { $x.CutCopyMode = $false; $w.Close($false) }
 }
 if (-not $wb) { $wb = $x.Workbooks.Open($yol) }
 $ws = $wb.Worksheets.Item(1)
